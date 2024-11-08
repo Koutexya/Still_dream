@@ -1,6 +1,6 @@
 #pragma once
-#include"DxLib.h"
-#include"memory"
+#include<DxLib.h>
+#include<memory>
 
 
 namespace dream

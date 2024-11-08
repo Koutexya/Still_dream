@@ -19,18 +19,27 @@
     <Filter Include="ソース ファイル\GameSystem\Window">
       <UniqueIdentifier>{8c9cc5fa-9098-4661-bb7c-24cee76de90a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\GameSystem\GameSetting">
+      <UniqueIdentifier>{03282fd5-c48b-4e4a-b94d-135d51d4e1f0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Code\GameSystem\Window.cpp">
+    <ClCompile Include="Code\GameSystem\Window\Window.cpp">
       <Filter>ソース ファイル\GameSystem\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\GameSystem\GameSetting\GameSetting.cpp">
+      <Filter>ソース ファイル\GameSystem\GameSetting</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Code\GameSystem\Window.h">
+    <ClInclude Include="Code\GameSystem\Window\Window.h">
       <Filter>ソース ファイル\GameSystem\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\GameSystem\GameSetting\GameSetting.h">
+      <Filter>ソース ファイル\GameSystem\GameSetting</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
