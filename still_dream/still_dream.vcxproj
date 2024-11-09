@@ -145,6 +145,7 @@
     <ClCompile Include="Code\GameSystem\Window\Window.cpp" />
     <ClCompile Include="Code\main.cpp" />
     <ClCompile Include="Code\Scene\SceneBase\SceneBase.cpp" />
+    <ClCompile Include="Code\Scene\SceneManager\SceneManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Code\FPS\Fps.h" />
@@ -152,6 +153,7 @@
     <ClInclude Include="Code\GameSystem\GameSetting\GameSetting.h" />
     <ClInclude Include="Code\GameSystem\Window\Window.h" />
     <ClInclude Include="Code\Scene\SceneBase\SceneBase.h" />
+    <ClInclude Include="Code\Scene\SceneManager\SceneManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
