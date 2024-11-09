@@ -139,11 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Code\FPS\Fps.cpp" />
     <ClCompile Include="Code\GameSystem\GameSetting\GameSetting.cpp" />
     <ClCompile Include="Code\GameSystem\Window\Window.cpp" />
     <ClCompile Include="Code\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Code\FPS\Fps.h" />
     <ClInclude Include="Code\GameSystem\GameSetting\GameSetting.h" />
     <ClInclude Include="Code\GameSystem\Window\Window.h" />
   </ItemGroup>
