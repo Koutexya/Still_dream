@@ -40,6 +40,12 @@
     <Filter Include="ソース ファイル\Scene\Title">
       <UniqueIdentifier>{0af70bde-b0ea-4636-a40f-601d223870e4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\JsonMaster">
+      <UniqueIdentifier>{88c9949a-dafa-497a-866f-3c41a47014ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\JsonMaster\IOUtility">
+      <UniqueIdentifier>{dc7b9e4e-dab8-485a-9e7c-ba629d088a15}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\main.cpp">
@@ -66,6 +72,9 @@
     <ClCompile Include="Code\Scene\Title\Title.cpp">
       <Filter>ソース ファイル\Scene\Title</Filter>
     </ClCompile>
+    <ClCompile Include="Code\JsonMaster\IOUtility\IOUtility.cpp">
+      <Filter>ソース ファイル\JsonMaster\IOUtility</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Code\GameSystem\Window\Window.h">
@@ -88,6 +97,9 @@
     </ClInclude>
     <ClInclude Include="Code\Scene\Title\Title.h">
       <Filter>ソース ファイル\Scene\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\JsonMaster\IOUtility\IOUtility.h">
+      <Filter>ソース ファイル\JsonMaster\IOUtility</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
