@@ -23,6 +23,6 @@ namespace dream
     private:
         float nowTime;  //現在の時間
         float prevTime; //過去の時間
-        float deltaTime;    //デルタタイム
+        float deltaTime;    //デルタタイム;
     };
 }

@@ -17,7 +17,7 @@ namespace dream
 
     void Fps::Update()
     {
-        //フレームレート算出
+        //フレームレート算出;
         nowTime = static_cast<float>(GetNowCount());
         deltaTime = (nowTime - prevTime) / 1000.0f;
         prevTime = nowTime;
