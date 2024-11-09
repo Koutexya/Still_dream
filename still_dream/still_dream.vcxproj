@@ -144,6 +144,7 @@
     <ClCompile Include="Code\GameSystem\GameSetting\GameSetting.cpp" />
     <ClCompile Include="Code\GameSystem\Window\Window.cpp" />
     <ClCompile Include="Code\JsonMaster\IOUtility\IOUtility.cpp" />
+    <ClCompile Include="Code\JsonMaster\JsonManager\JsonManager.cpp" />
     <ClCompile Include="Code\main.cpp" />
     <ClCompile Include="Code\Scene\SceneBase\SceneBase.cpp" />
     <ClCompile Include="Code\Scene\SceneManager\SceneManager.cpp" />
@@ -155,6 +156,7 @@
     <ClInclude Include="Code\GameSystem\GameSetting\GameSetting.h" />
     <ClInclude Include="Code\GameSystem\Window\Window.h" />
     <ClInclude Include="Code\JsonMaster\IOUtility\IOUtility.h" />
+    <ClInclude Include="Code\JsonMaster\JsonManager\JsonManager.h" />
     <ClInclude Include="Code\Scene\SceneBase\SceneBase.h" />
     <ClInclude Include="Code\Scene\SceneManager\SceneManager.h" />
     <ClInclude Include="Code\Scene\Title\Title.h" />
