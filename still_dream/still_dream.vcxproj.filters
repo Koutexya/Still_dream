@@ -49,6 +49,15 @@
     <Filter Include="ソース ファイル\JsonMaster\JsonManager">
       <UniqueIdentifier>{f8769ba6-f98d-47d5-bc57-428db062cfb0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Object">
+      <UniqueIdentifier>{d09ed089-b620-450c-9645-3b49ca1bfaf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Object\Title">
+      <UniqueIdentifier>{08425e13-dfa9-4ee4-8082-d5da3949ec68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Object\Title\BackGround">
+      <UniqueIdentifier>{079a375f-3759-4a3e-b9ba-d0779514269a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\main.cpp">
@@ -81,6 +90,9 @@
     <ClCompile Include="Code\JsonMaster\JsonManager\JsonManager.cpp">
       <Filter>ソース ファイル\JsonMaster\JsonManager</Filter>
     </ClCompile>
+    <ClCompile Include="Code\Object\Title\BackGround\BackGround.cpp">
+      <Filter>ソース ファイル\Object\Title\BackGround</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Code\GameSystem\Window\Window.h">
@@ -109,6 +121,9 @@
     </ClInclude>
     <ClInclude Include="Code\JsonMaster\JsonManager\JsonManager.h">
       <Filter>ソース ファイル\JsonMaster\JsonManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Object\Title\BackGround\BackGround.h">
+      <Filter>ソース ファイル\Object\Title\BackGround</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
