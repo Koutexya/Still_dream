@@ -58,6 +58,9 @@
     <Filter Include="ソース ファイル\Object\Title\BackGround">
       <UniqueIdentifier>{079a375f-3759-4a3e-b9ba-d0779514269a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Object\GameObject">
+      <UniqueIdentifier>{74482c09-f0c3-4eb4-81fb-b9b70eb9fe3d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\main.cpp">
@@ -93,6 +96,9 @@
     <ClCompile Include="Code\Object\Title\BackGround\BackGround.cpp">
       <Filter>ソース ファイル\Object\Title\BackGround</Filter>
     </ClCompile>
+    <ClCompile Include="Code\Object\GameObject\GameObject.cpp">
+      <Filter>ソース ファイル\Object\GameObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Code\GameSystem\Window\Window.h">
@@ -124,6 +130,9 @@
     </ClInclude>
     <ClInclude Include="Code\Object\Title\BackGround\BackGround.h">
       <Filter>ソース ファイル\Object\Title\BackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Object\GameObject\GameObject.h">
+      <Filter>ソース ファイル\Object\GameObject</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
