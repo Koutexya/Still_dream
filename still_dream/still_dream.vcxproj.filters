@@ -28,6 +28,12 @@
     <Filter Include="ソース ファイル\GameSystem\GameManager">
       <UniqueIdentifier>{a6598a3d-d9e8-49ea-8c82-08dbed368f13}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Scene">
+      <UniqueIdentifier>{82fa659c-04fe-4b59-92dc-118d0c01ea6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Scene\SceneBase">
+      <UniqueIdentifier>{d1931afa-28a1-4fd9-9f98-46f8bd881d51}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\main.cpp">
@@ -45,6 +51,9 @@
     <ClCompile Include="Code\GameSystem\GameManager\GameManager.cpp">
       <Filter>ソース ファイル\GameSystem\GameManager</Filter>
     </ClCompile>
+    <ClCompile Include="Code\Scene\SceneBase\SceneBase.cpp">
+      <Filter>ソース ファイル\Scene\SceneBase</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Code\GameSystem\Window\Window.h">
@@ -58,6 +67,9 @@
     </ClInclude>
     <ClInclude Include="Code\GameSystem\GameManager\GameManager.h">
       <Filter>ソース ファイル\GameSystem\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Scene\SceneBase\SceneBase.h">
+      <Filter>ソース ファイル\Scene\SceneBase</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
