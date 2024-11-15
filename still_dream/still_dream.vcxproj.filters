@@ -134,5 +134,8 @@
     <ClInclude Include="Code\Object\GameObject\GameObject.h">
       <Filter>ソース ファイル\Object\GameObject</Filter>
     </ClInclude>
+    <ClInclude Include="Code\Object\GameObject\TitleObjectTag.h">
+      <Filter>ソース ファイル\Object\GameObject</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

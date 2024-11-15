@@ -160,6 +160,7 @@
     <ClInclude Include="Code\JsonMaster\IOUtility\IOUtility.h" />
     <ClInclude Include="Code\JsonMaster\JsonManager\JsonManager.h" />
     <ClInclude Include="Code\Object\GameObject\GameObject.h" />
+    <ClInclude Include="Code\Object\GameObject\TitleObjectTag.h" />
     <ClInclude Include="Code\Object\Title\BackGround\BackGround.h" />
     <ClInclude Include="Code\Scene\SceneBase\SceneBase.h" />
     <ClInclude Include="Code\Scene\SceneManager\SceneManager.h" />
