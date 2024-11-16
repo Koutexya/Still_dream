@@ -3,7 +3,7 @@
 namespace dream
 {
     BackGround::BackGround()
-        :GameObject(titleObjectTag.BackGround)
+        :GameObject(titleObjectTag.BACKGROUND)
     {
         //‰æ‘œ“Ç‚Ýž‚Ý
         BackGroundHandle = LoadGraph("JsonManager::titleDataInstance()->GetBackGround();");

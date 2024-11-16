@@ -6,6 +6,7 @@
 #include<string>
 
 #include"../../JsonMaster/JsonManager/JsonManager.h"
+#include"TitleObjectTag.h"
 
 namespace dream
 {
