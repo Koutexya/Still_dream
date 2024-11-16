@@ -1,4 +1,5 @@
 #include <DxLib.h>
+#include"GameSystem/GameManager/GameManager.h"
 
 //int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 //{
@@ -21,3 +22,14 @@
 //
 //    return 0;        // ソフトの終了
 //}
+
+using namespace dream;
+
+int WINAPI _stdcall WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int)
+{
+    //ゲームのシーン管理
+    std::shared_ptr<GameManager> gamemanager(new GameManager);
+    gamemanager->Finalize();
+
+    return 0;
+}
