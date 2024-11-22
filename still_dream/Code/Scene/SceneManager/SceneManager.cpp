@@ -12,9 +12,10 @@ namespace dream
     {
         //初期化処理
         //ここにGameObjectManagerのInit
+        
 
         //現在のシーンをタイトルに設定
-        
+        //mNowScene.emplace(new Title);
     }
 
 
