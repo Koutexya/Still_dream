@@ -11,7 +11,7 @@ namespace dream
         Window::Init();
         //GameSetting‰Šú‰»
         GameSetting::Init();
-
+        sceneManager.reset(new SceneManager);
     }
 
     GameManager::~GameManager()
@@ -21,6 +21,6 @@ namespace dream
 
     void GameManager::Finalize()
     {
-
+        sceneManager->GameLoop();
     }
 }
