@@ -146,6 +146,7 @@
     <ClCompile Include="Code\JsonMaster\IOUtility\IOUtility.cpp" />
     <ClCompile Include="Code\JsonMaster\JsonManager\JsonManager.cpp" />
     <ClCompile Include="Code\main.cpp" />
+    <ClCompile Include="Code\Object\GameObjectManager\GameObjectManager.cpp" />
     <ClCompile Include="Code\Object\GameObject\GameObject.cpp" />
     <ClCompile Include="Code\Object\Title\BackGround\BackGround.cpp" />
     <ClCompile Include="Code\Object\Title\Ui\Ui.cpp" />
@@ -160,6 +161,7 @@
     <ClInclude Include="Code\GameSystem\Window\Window.h" />
     <ClInclude Include="Code\JsonMaster\IOUtility\IOUtility.h" />
     <ClInclude Include="Code\JsonMaster\JsonManager\JsonManager.h" />
+    <ClInclude Include="Code\Object\GameObjectManager\GameObjectManager.h" />
     <ClInclude Include="Code\Object\GameObject\GameObject.h" />
     <ClInclude Include="Code\Object\GameObject\TitleObjectTag.h" />
     <ClInclude Include="Code\Object\Title\BackGround\BackGround.h" />

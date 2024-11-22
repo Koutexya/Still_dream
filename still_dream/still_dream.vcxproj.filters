@@ -64,6 +64,9 @@
     <Filter Include="ソース ファイル\Object\Title\Ui">
       <UniqueIdentifier>{548899a9-d484-4b28-84b7-fcde268f7165}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Object\GameObjectManager">
+      <UniqueIdentifier>{d6f28093-45fe-49d0-bb0d-ef6a1f6e2709}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\main.cpp">
@@ -105,6 +108,9 @@
     <ClCompile Include="Code\Object\Title\Ui\Ui.cpp">
       <Filter>ソース ファイル\Object\Title\Ui</Filter>
     </ClCompile>
+    <ClCompile Include="Code\Object\GameObjectManager\GameObjectManager.cpp">
+      <Filter>ソース ファイル\Object\GameObjectManager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Code\GameSystem\Window\Window.h">
@@ -145,6 +151,9 @@
     </ClInclude>
     <ClInclude Include="Code\Object\Title\Ui\Ui.h">
       <Filter>ソース ファイル\Object\Title\Ui</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Object\GameObjectManager\GameObjectManager.h">
+      <Filter>ソース ファイル\Object\GameObjectManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
