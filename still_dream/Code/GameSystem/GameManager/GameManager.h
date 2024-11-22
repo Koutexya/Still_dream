@@ -4,6 +4,7 @@
 
 #include"../Window/Window.h"
 #include"../GameSetting/GameSetting.h"
+#include"../../Scene/SceneManager/SceneManager.h"
 
 
 namespace dream
@@ -22,6 +23,6 @@ namespace dream
         void Finalize();
 
     private:
-
+        std::unique_ptr<class SceneManager> sceneManager;
     };
 }
