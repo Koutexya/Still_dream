@@ -19,7 +19,14 @@ namespace dream
         /// @brief  •`‰æˆ—
         void Draw()override;
 
-    private:
+        /// @brief “ü—Íˆ—
+        void Input()override;
 
+    private:
+        int TitleScene = 0;
+        bool TitleFlg = true;
+        int KeyUpFlag = 0;
+        int KeyDownFlag = 0;
+        int Pos = 300;
     };
 }
