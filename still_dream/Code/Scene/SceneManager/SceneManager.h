@@ -2,8 +2,7 @@
 #include<memory>
 #include<stack>
 
-#include"../SceneBase/SceneBase.h"
-#include"../../FPS/Fps.h"
+#include"../../Object/GameObjectManager/GameObjectManager.h"
 
 namespace dream
 {
