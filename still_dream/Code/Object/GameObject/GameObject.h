@@ -5,8 +5,10 @@
 #include<DxLib.h>
 #include<string>
 
-#include"../../JsonMaster/JsonManager/JsonManager.h"
+#include"../GameObjectManager/GameObjectManager.h"
 #include"TitleObjectTag.h"
+#include"../../JsonMaster/JsonManager/JsonManager.h"
+
 
 namespace dream
 {
