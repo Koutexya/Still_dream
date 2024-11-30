@@ -6,9 +6,12 @@
 namespace dream
 {
     Title::Title()
-        :SceneBase()
     {
-        //処理なし
+        //現在のシーン
+        GameObjectManager::NowSceneSet(TitleObjectTagOrder);
+        //生成
+        GameObjectManager::Entry(new BackGround);
+        GameObjectManager::Entry(new Ui);
     }
 
     Title::~Title()
@@ -18,16 +21,20 @@ namespace dream
 
     SceneBase* Title::Update(float deltaTime)
     {
+        //全ゲームオブジェクトの更新
+        GameObjectManager::Update(deltaTime);
         //シーン切り替え
-        if (CheckHitKey(KEY_INPUT_SPACE))
+        /*if (CheckHitKey(KEY_INPUT_RETURN))
         {
-            
-        }
+            return new Play;
+        }*/
         return this;
     }
 
     void Title::Draw()
     {
+        //全ゲームオブジェクトの描画
+        GameObjectManager::Draw();
         DrawFormatString(0, 0, GetColor(255, 255, 255), "title");
     }
 }
