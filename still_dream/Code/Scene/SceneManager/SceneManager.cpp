@@ -2,6 +2,9 @@
 #include<assert.h>
 
 #include"SceneManager.h"
+#include"../SceneBase/SceneBase.h"
+#include"../Title/Title.h"
+#include"../../FPS/Fps.h"
 
 
 namespace dream
@@ -15,7 +18,7 @@ namespace dream
         
 
         //現在のシーンをタイトルに設定
-        //mNowScene.emplace(new Title);
+        mNowScene.emplace(new Title);
     }
 
 
