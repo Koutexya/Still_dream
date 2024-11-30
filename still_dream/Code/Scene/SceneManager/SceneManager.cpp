@@ -14,7 +14,7 @@ namespace dream
         , mFps(new Fps)
     {
         //初期化処理
-        //ここにGameObjectManagerのInit
+        GameObjectManager::Initialize();
         
 
         //現在のシーンをタイトルに設定
