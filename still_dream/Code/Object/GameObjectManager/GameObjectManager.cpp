@@ -14,7 +14,7 @@ namespace dream
 
     GameObjectManager::~GameObjectManager()
     {
-        //前方宣言開放
+        //前方宣言解放
         delete gameObject;
     }
 
@@ -35,6 +35,46 @@ namespace dream
     void GameObjectManager::Entry(GameObject* newObj)
     {
         //タグの検索をしてオブジェクト登録
+        std::string tag = newObj->GetTagName();
+        mInstance->mObjects[tag].emplace_back(newObj);
     }
 
+    void GameObjectManager::ReleaseAllObj()
+    {
+        for (std::string& tag : mInstance->NowScene_ObjTag)
+        {
+            //末尾からアクティブオブジェトの削除
+            while (!mInstance->mObjects[tag].empty())
+            {
+                //要素を参照して削除
+                delete mInstance->mObjects[tag].back().get();
+                mInstance->mObjects[tag].pop_back();
+            }
+        }
+    }
+
+    void GameObjectManager::Update(float deltaTime)
+    {
+        for (std::string& tag : mInstance->NowScene_ObjTag)
+        {
+            // 該当タグにあるすべてのオブジェクトを更新
+            for (auto& obj : mInstance->mObjects[tag])
+            {
+                //更新
+                obj->Update(deltaTime);
+            }
+        }
+
+    }
+
+    void GameObjectManager::Draw()
+    {
+        for (std::string& tag : mInstance->NowScene_ObjTag)
+        {
+            for (auto& obj : mInstance->mObjects[tag])
+            {
+                obj->Draw();
+            }
+        }
+    }
 }
