@@ -1,5 +1,9 @@
 #pragma once
 #include"../SceneBase/SceneBase.h"
+#include"../../Object/GameObjectManager/GameObjectManager.h"
+#include"../../Object/GameObject/TitleObjectTag.h"
+#include"../../Object/Title/BackGround/BackGround.h"
+#include"../../Object/Title/Ui/Ui.h"
 
 namespace dream
 {
