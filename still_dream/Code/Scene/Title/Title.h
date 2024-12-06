@@ -4,6 +4,7 @@
 #include"../../Object/GameObject/TitleObjectTag.h"
 #include"../../Object/Title/BackGround/BackGround.h"
 #include"../../Object/Title/Ui/Ui.h"
+#include"../../Object/StageSelect/StageSelect.h"
 
 namespace dream
 {
