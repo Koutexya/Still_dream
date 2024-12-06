@@ -105,7 +105,14 @@ namespace dream
                 //エンターでプレイ先を決定
                 if (CheckHitKey(KEY_INPUT_RETURN))
                 {
-                    StageSelect::SetSelect(Pos);
+                    if (Pos == 300)
+                    {
+                        StageSelect::SetSelect(stageTag.Stage1);
+                    }
+                    if (Pos == 500)
+                    {
+                        StageSelect::SetSelect(stageTag.Stage2);
+                    }
                 }
             }
         }

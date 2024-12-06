@@ -23,10 +23,11 @@ namespace dream
     {
         //全ゲームオブジェクトの更新
         GameObjectManager::Update(deltaTime);
+        
         //シーン切り替え
         /*if (CheckHitKey(KEY_INPUT_RETURN))
         {
-            GameObjectManager::releaseallobjをする
+            GameObjectManager::ReleaseAllObj();
             return new Play;
         }*/
         return this;
