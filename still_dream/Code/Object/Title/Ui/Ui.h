@@ -1,5 +1,6 @@
 #pragma once
 #include"../../GameObject/GameObject.h"
+#include"../../StageSelect/StageSelect.h"
 
 namespace dream
 {
@@ -31,5 +32,8 @@ namespace dream
         bool KeyRightFlag = false;
         int Pos = 300;
         int MusicVolume = 100;
+
+
+        static std::unique_ptr<StageSelect> stageselect;
     };
 }
