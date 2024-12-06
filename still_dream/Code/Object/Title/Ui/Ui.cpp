@@ -41,6 +41,7 @@ namespace dream
                     if (Pos != 300)
                     {
                         Pos -= 200;
+                        stageselect.get()->SetSelect(Pos);
                     }
                     KeyUpFlag = true;
                 }
