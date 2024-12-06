@@ -41,7 +41,6 @@ namespace dream
                     if (Pos != 300)
                     {
                         Pos -= 200;
-                        stageselect.get()->SetSelect(Pos);
                     }
                     KeyUpFlag = true;
                 }
@@ -65,6 +64,7 @@ namespace dream
             {
                 KeyDownFlag = false;
             }
+            
 
             //音量変更
             if (Pos == 700)
@@ -98,6 +98,14 @@ namespace dream
                 else
                 {
                     KeyRightFlag = false;
+                }
+            }
+            else
+            {
+                //エンターでプレイ先を決定
+                if (CheckHitKey(KEY_INPUT_RETURN))
+                {
+                    StageSelect::SetSelect(Pos);
                 }
             }
         }

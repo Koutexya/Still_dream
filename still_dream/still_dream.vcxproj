@@ -148,6 +148,7 @@
     <ClCompile Include="Code\main.cpp" />
     <ClCompile Include="Code\Object\GameObjectManager\GameObjectManager.cpp" />
     <ClCompile Include="Code\Object\GameObject\GameObject.cpp" />
+    <ClCompile Include="Code\Object\StageSelect\StageSelect.cpp" />
     <ClCompile Include="Code\Object\Title\BackGround\BackGround.cpp" />
     <ClCompile Include="Code\Object\Title\Ui\Ui.cpp" />
     <ClCompile Include="Code\Scene\SceneBase\SceneBase.cpp" />

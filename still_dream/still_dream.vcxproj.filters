@@ -114,6 +114,9 @@
     <ClCompile Include="Code\Object\GameObjectManager\GameObjectManager.cpp">
       <Filter>ソース ファイル\Object\GameObjectManager</Filter>
     </ClCompile>
+    <ClCompile Include="Code\Object\StageSelect\StageSelect.cpp">
+      <Filter>ソース ファイル\Object\StageSelect</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Code\GameSystem\Window\Window.h">
