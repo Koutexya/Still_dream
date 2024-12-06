@@ -2,6 +2,8 @@
 #include<DxLib.h>
 #include<memory>
 
+#include"StageTag.h"
+
 
 namespace dream
 {
@@ -15,13 +17,13 @@ namespace dream
         static void Initialize();
 
         /// @brief  選択したステージをセット
-        static void SetSelect(int stage) { mInstance->SelectNum = stage; }
+        static void SetSelect(std::string stage) { mInstance->SelectNum = stage; }
 
         /// @brief  選択したステージをゲット
-        static int GetSelect() { return mInstance->SelectNum; }
+        static std::string GetSelect() { return mInstance->SelectNum; }
 
     private:
-        int SelectNum = 0;
+        std::string SelectNum;
 
         /// @brief  コンストラクタ
         StageSelect();

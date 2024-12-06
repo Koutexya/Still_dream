@@ -164,5 +164,8 @@
     <ClInclude Include="Code\Object\StageSelect\StageSelect.h">
       <Filter>ソース ファイル\Object\StageSelect</Filter>
     </ClInclude>
+    <ClInclude Include="Code\Object\StageSelect\StageTag.h">
+      <Filter>ソース ファイル\Object\StageSelect</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
