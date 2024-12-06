@@ -25,11 +25,16 @@ namespace dream
         GameObjectManager::Update(deltaTime);
         
         //ƒV[ƒ“Ø‚è‘Ö‚¦
-        /*if (CheckHitKey(KEY_INPUT_RETURN))
+        if (stageTag.Stage1 == StageSelect::GetSelect())
         {
             GameObjectManager::ReleaseAllObj();
-            return new Play;
-        }*/
+            //return new Stage1;
+        }
+        if (stageTag.Stage2 == StageSelect::GetSelect())
+        {
+            GameObjectManager::ReleaseAllObj();
+            //return new Stage2;
+        }
         return this;
     }
 

@@ -6,6 +6,7 @@ namespace dream
         :GameObject(titleObjectTag.UI)
     {
         SetFontSize(64);
+        StageSelect::Initialize();
     }
 
     Ui::~Ui()
