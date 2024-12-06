@@ -67,6 +67,9 @@
     <Filter Include="ソース ファイル\Object\GameObjectManager">
       <UniqueIdentifier>{d6f28093-45fe-49d0-bb0d-ef6a1f6e2709}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Object\StageSelect">
+      <UniqueIdentifier>{f5931b36-ea96-4174-aa29-f36a9276470f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\main.cpp">
@@ -154,6 +157,9 @@
     </ClInclude>
     <ClInclude Include="Code\Object\GameObjectManager\GameObjectManager.h">
       <Filter>ソース ファイル\Object\GameObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Object\StageSelect\StageSelect.h">
+      <Filter>ソース ファイル\Object\StageSelect</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
