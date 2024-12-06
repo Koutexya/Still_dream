@@ -26,6 +26,7 @@ namespace dream
         //ƒV[ƒ“Ø‚è‘Ö‚¦
         /*if (CheckHitKey(KEY_INPUT_RETURN))
         {
+            GameObjectManager::releaseallobj‚ğ‚·‚é
             return new Play;
         }*/
         return this;
