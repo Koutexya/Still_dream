@@ -164,6 +164,7 @@
     <ClInclude Include="Code\Object\GameObjectManager\GameObjectManager.h" />
     <ClInclude Include="Code\Object\GameObject\GameObject.h" />
     <ClInclude Include="Code\Object\GameObject\TitleObjectTag.h" />
+    <ClInclude Include="Code\Object\StageSelect\StageSelect.h" />
     <ClInclude Include="Code\Object\Title\BackGround\BackGround.h" />
     <ClInclude Include="Code\Object\Title\Ui\Ui.h" />
     <ClInclude Include="Code\Scene\SceneBase\SceneBase.h" />
