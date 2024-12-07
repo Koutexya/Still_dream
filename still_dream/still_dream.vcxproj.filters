@@ -85,6 +85,9 @@
     <Filter Include="ソース ファイル\Object\Stage1\Player">
       <UniqueIdentifier>{b8afe52f-ab5a-434a-a05c-c04add1ae37a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Object\Stage1\Ui">
+      <UniqueIdentifier>{8d7459d5-f073-457c-b6d8-bc7a2e26b5a0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\main.cpp">
@@ -143,6 +146,9 @@
     </ClCompile>
     <ClCompile Include="Code\Object\Stage1\Player\Stage1Player.cpp">
       <Filter>ソース ファイル\Object\Stage1\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Object\Stage1\Ui\Stage1Ui.cpp">
+      <Filter>ソース ファイル\Object\Stage1\Ui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -208,6 +214,9 @@
     </ClInclude>
     <ClInclude Include="Code\Object\Stage1\Player\Stage1Player.h">
       <Filter>ソース ファイル\Object\Stage1\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Object\Stage1\Ui\Stage1Ui.h">
+      <Filter>ソース ファイル\Object\Stage1\Ui</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
