@@ -11,6 +11,8 @@ namespace dream
         GameObjectManager::NowSceneSet(Stage1ObjectTagOrder);
         //ê∂ê¨
         GameObjectManager::Entry(new Stage1BackGround);
+        GameObjectManager::Entry(new Stage1Player);
+        GameObjectManager::Entry(new Stage1Ui);
     }
 
     Stage1::~Stage1()
