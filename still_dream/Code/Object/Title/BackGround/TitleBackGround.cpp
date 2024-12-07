@@ -1,26 +1,26 @@
-#include"BackGround.h"
+#include"TitleBackGround.h"
 
 namespace dream
 {
-    BackGround::BackGround()
+    TitleBackGround::TitleBackGround()
         :GameObject(titleObjectTag.BACKGROUND)
     {
         //画像読み込み
         BackGroundHandle = LoadGraph("JsonManager::titleDataInstance()->GetBackGround();");
     }
 
-    BackGround::~BackGround()
+    TitleBackGround::~TitleBackGround()
     {
         //読み込みデータの削除
         DeleteGraph(BackGroundHandle);
     }
 
-    void BackGround::Update(float deltaTime)
+    void TitleBackGround::Update(float deltaTime)
     {
         Draw();
     }
 
-    void BackGround::Draw()
+    void TitleBackGround::Draw()
     {
         //背景の表示
         DrawGraph(0, 0, BackGroundHandle, TRUE);

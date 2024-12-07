@@ -111,7 +111,7 @@
     <ClCompile Include="Code\JsonMaster\JsonManager\JsonManager.cpp">
       <Filter>ソース ファイル\JsonMaster\JsonManager</Filter>
     </ClCompile>
-    <ClCompile Include="Code\Object\Title\BackGround\BackGround.cpp">
+    <ClCompile Include="Code\Object\Title\BackGround\TitleBackGround.cpp">
       <Filter>ソース ファイル\Object\Title\BackGround</Filter>
     </ClCompile>
     <ClCompile Include="Code\Object\GameObject\GameObject.cpp">
@@ -161,7 +161,7 @@
     <ClInclude Include="Code\JsonMaster\JsonManager\JsonManager.h">
       <Filter>ソース ファイル\JsonMaster\JsonManager</Filter>
     </ClInclude>
-    <ClInclude Include="Code\Object\Title\BackGround\BackGround.h">
+    <ClInclude Include="Code\Object\Title\BackGround\TitleBackGround.h">
       <Filter>ソース ファイル\Object\Title\BackGround</Filter>
     </ClInclude>
     <ClInclude Include="Code\Object\GameObject\GameObject.h">
