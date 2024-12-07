@@ -2,7 +2,7 @@
 #include"../SceneBase/SceneBase.h"
 #include"../../Object/GameObjectManager/GameObjectManager.h"
 #include"../../Object/GameObject/Stage1ObjectTag.h"
-#include"../../Object/Stage1/BackGround/BackGround.h"
+#include"../../Object/Stage1/BackGround/Stage1BackGround.h"
 
 namespace dream
 {

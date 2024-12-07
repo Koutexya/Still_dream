@@ -10,7 +10,7 @@ namespace dream
         //åªç›ÇÃÉVÅ[Éì
         GameObjectManager::NowSceneSet(TitleObjectTagOrder);
         //ê∂ê¨
-        GameObjectManager::Entry(new BackGround);
+        GameObjectManager::Entry(new TitleBackGround);
         GameObjectManager::Entry(new Ui);
     }
 

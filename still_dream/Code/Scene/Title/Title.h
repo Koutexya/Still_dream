@@ -2,7 +2,7 @@
 #include"../SceneBase/SceneBase.h"
 #include"../../Object/GameObjectManager/GameObjectManager.h"
 #include"../../Object/GameObject/TitleObjectTag.h"
-#include"../../Object/Title/BackGround/BackGround.h"
+#include"../../Object/Title/BackGround/TitleBackGround.h"
 #include"../../Object/Title/Ui/Ui.h"
 #include"../../Object/StageSelect/StageSelect.h"
 
