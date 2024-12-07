@@ -148,7 +148,7 @@
     <ClCompile Include="Code\main.cpp" />
     <ClCompile Include="Code\Object\GameObjectManager\GameObjectManager.cpp" />
     <ClCompile Include="Code\Object\GameObject\GameObject.cpp" />
-    <ClCompile Include="Code\Object\Stage1\BackGround\BackGround.cpp" />
+    <ClCompile Include="Code\Object\Stage1\BackGround\Stage1BackGround.cpp" />
     <ClCompile Include="Code\Object\StageSelect\StageSelect.cpp" />
     <ClCompile Include="Code\Object\Title\BackGround\BackGround.cpp" />
     <ClCompile Include="Code\Object\Title\Ui\Ui.cpp" />
@@ -168,7 +168,7 @@
     <ClInclude Include="Code\Object\GameObject\GameObject.h" />
     <ClInclude Include="Code\Object\GameObject\Stage1ObjectTag.h" />
     <ClInclude Include="Code\Object\GameObject\TitleObjectTag.h" />
-    <ClInclude Include="Code\Object\Stage1\BackGround\BackGround.h" />
+    <ClInclude Include="Code\Object\Stage1\BackGround\Stage1BackGround.h" />
     <ClInclude Include="Code\Object\StageSelect\StageSelect.h" />
     <ClInclude Include="Code\Object\StageSelect\StageTag.h" />
     <ClInclude Include="Code\Object\Title\BackGround\BackGround.h" />

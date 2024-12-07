@@ -1,22 +1,22 @@
-#include"BackGround.h"
+#include"Stage1BackGround.h"
 #include"../../../JsonMaster/JsonManager/JsonManager.h"
 
 namespace dream
 {
-    BackGround::BackGround()
+    Stage1BackGround::Stage1BackGround()
         :GameObject(stage1ObjectTag.BACKGROUND)
     {
         //画像読み込み
         BackGroundImg = LoadGraph("");
     }
 
-    BackGround::~BackGround()
+    Stage1BackGround::~Stage1BackGround()
     {
         //読み込みデータの削除
         //DeleteGraph(BackGroundImg);
     }
 
-    void BackGround::Draw()
+    void Stage1BackGround::Draw()
     {
         //背景の表示
         DrawGraph(0, 0, BackGroundImg, TRUE);
