@@ -38,6 +38,11 @@ namespace dream
         /// @brief  全オブジェクトの描画
         static void Draw();
 
+        /// @brief  タグ種類の初めのオブジェクトを返す
+        /// @param  オブジェクトの種類
+        /// @return 最初のオブジェクト
+        GameObject* GetFirstGameObj(std::string tag);
+
     private:
         GameObject* gameObject;
 
