@@ -117,7 +117,7 @@
     <ClCompile Include="Code\Object\GameObject\GameObject.cpp">
       <Filter>ソース ファイル\Object\GameObject</Filter>
     </ClCompile>
-    <ClCompile Include="Code\Object\Title\Ui\Ui.cpp">
+    <ClCompile Include="Code\Object\Title\Ui\TitleUi.cpp">
       <Filter>ソース ファイル\Object\Title\Ui</Filter>
     </ClCompile>
     <ClCompile Include="Code\Object\GameObjectManager\GameObjectManager.cpp">
@@ -170,7 +170,7 @@
     <ClInclude Include="Code\Object\GameObject\TitleObjectTag.h">
       <Filter>ソース ファイル\Object\GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="Code\Object\Title\Ui\Ui.h">
+    <ClInclude Include="Code\Object\Title\Ui\TitleUi.h">
       <Filter>ソース ファイル\Object\Title\Ui</Filter>
     </ClInclude>
     <ClInclude Include="Code\Object\GameObjectManager\GameObjectManager.h">

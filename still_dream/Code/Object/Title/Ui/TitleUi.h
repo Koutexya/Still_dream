@@ -4,14 +4,14 @@
 
 namespace dream
 {
-    class Ui : public GameObject
+    class TitleUi : public GameObject
     {
     public:
         /// @brief  コンストラクタ
-        Ui();
+        TitleUi();
 
         /// @brief  デストラクタ
-        ~Ui();
+        ~TitleUi();
 
         /// @brief  更新処理
         /// @param  デルタタイム
