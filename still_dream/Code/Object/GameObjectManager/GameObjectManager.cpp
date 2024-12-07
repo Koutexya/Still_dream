@@ -43,12 +43,9 @@ namespace dream
     {
         for (std::string& tag : mInstance->NowScene_ObjTag)
         {
-            //末尾からアクティブオブジェトの削除
-            while (!mInstance->mObjects[tag].empty())
+            if (!mInstance->mObjects[tag].empty())
             {
-                //要素を参照して削除
-                delete mInstance->mObjects[tag].back().get();
-                mInstance->mObjects[tag].pop_back();
+                mInstance->mObjects[tag].clear();
             }
         }
     }
@@ -76,5 +73,18 @@ namespace dream
                 obj->Draw();
             }
         }
+    }
+
+    GameObject* GameObjectManager::GetFirstGameObj(std::string tag)
+    {
+        //アクティブリストに何も入ってなかったら
+        if (mInstance->mObjects[tag].size() == 0)
+        {
+            //nullptr 空 何もない
+            return nullptr;
+        }
+
+        //もし入っていたらアクティブリストのオブジェクトの一番目(個数)を返す
+        return mInstance->mObjects[tag][0].get();
     }
 }
