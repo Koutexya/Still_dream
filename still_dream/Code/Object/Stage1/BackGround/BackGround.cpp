@@ -7,7 +7,7 @@ namespace dream
         :GameObject(stage1ObjectTag.BACKGROUND)
     {
         //‰æ‘œ“Ç‚İ‚İ
-        //BackGroundImg = LoadGraph()
+        BackGroundImg = LoadGraph("");
     }
 
     BackGround::~BackGround()

@@ -8,6 +8,9 @@ namespace dream
     class BackGround : public GameObject
     {
     public:
+        /// @brief  コンストラクタ
+        BackGround();
+
         /// @brief  デストラクタ
         ~BackGround();
 
@@ -19,8 +22,7 @@ namespace dream
         void Draw()override;
 
     private:
-        /// @brief  コンストラクタ
-        BackGround();
+        
 
         int BackGroundImg;
     };

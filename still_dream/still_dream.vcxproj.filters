@@ -76,6 +76,9 @@
     <Filter Include="ソース ファイル\Object\Stage1\BackGround">
       <UniqueIdentifier>{5cff541b-8c56-4685-84cf-5f084b5dcfa0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Scene\Stage1">
+      <UniqueIdentifier>{37062c96-2ba9-4aea-987d-8e1bbfd459bf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\main.cpp">
@@ -125,6 +128,9 @@
     </ClCompile>
     <ClCompile Include="Code\Object\Stage1\BackGround\BackGround.cpp">
       <Filter>ソース ファイル\Object\Stage1\BackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Scene\Stage1\Stage1.cpp">
+      <Filter>ソース ファイル\Scene\Stage1</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -181,6 +187,9 @@
     </ClInclude>
     <ClInclude Include="Code\Object\Stage1\BackGround\BackGround.h">
       <Filter>ソース ファイル\Object\Stage1\BackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Scene\Stage1\Stage1.h">
+      <Filter>ソース ファイル\Scene\Stage1</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
