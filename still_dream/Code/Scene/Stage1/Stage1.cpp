@@ -30,8 +30,11 @@ namespace dream
         //GameObjectManager::ReleaseAllObj();
         //return new Stage1;
         ////タイトルに戻るボタン押した場合
-        //GameObjectManager::ReleaseAllObj();
-        //return new Title;
+        if (CheckHitKey(KEY_INPUT_TAB))
+        {
+            GameObjectManager::ReleaseAllObj();
+            return new Title;
+        }
 
         return this;
     }

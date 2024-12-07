@@ -22,16 +22,19 @@ namespace dream
 
     void TitleUi::Input()
     {
-        //タイトルのフェードイン表示が終わったら
-        if (TitleFlg == false)
+        
+        if (TitleScene == 0)
         {
-            //タイトル表示から次に進む
-            if (CheckHitKey(KEY_INPUT_SPACE))
+            //タイトルのフェードイン表示が終わったら
+            if (TitleFlg == false)
             {
-                TitleScene = 1;
+                //タイトル表示から次に進む
+                if (CheckHitKey(KEY_INPUT_SPACE))
+                {
+                    TitleScene = 1;
+                }
             }
         }
-
         if (TitleScene == 1)
         {
             //上下で移動
