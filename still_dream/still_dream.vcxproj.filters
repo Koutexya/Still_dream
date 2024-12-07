@@ -82,6 +82,9 @@
     <Filter Include="ソース ファイル\Object\Stage1\Map">
       <UniqueIdentifier>{d3a6f7ad-fbf9-411e-b378-3f21c4b919aa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Object\Stage1\Player">
+      <UniqueIdentifier>{b8afe52f-ab5a-434a-a05c-c04add1ae37a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\main.cpp">
@@ -137,6 +140,9 @@
     </ClCompile>
     <ClCompile Include="Code\Object\Stage1\Map\Stage1Map.cpp">
       <Filter>ソース ファイル\Object\Stage1\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Object\Stage1\Player\Stage1Player.cpp">
+      <Filter>ソース ファイル\Object\Stage1\Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -199,6 +205,9 @@
     </ClInclude>
     <ClInclude Include="Code\Object\Stage1\Map\Stage1Map.h">
       <Filter>ソース ファイル\Object\Stage1\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Object\Stage1\Player\Stage1Player.h">
+      <Filter>ソース ファイル\Object\Stage1\Player</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
