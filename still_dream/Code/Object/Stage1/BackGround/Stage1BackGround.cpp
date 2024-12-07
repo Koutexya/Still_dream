@@ -7,13 +7,13 @@ namespace dream
         :GameObject(stage1ObjectTag.BACKGROUND)
     {
         //画像読み込み
-        BackGroundImg = LoadGraph("");
+        //BackGroundImg = LoadGraph("");
     }
 
     Stage1BackGround::~Stage1BackGround()
     {
         //読み込みデータの削除
-        //DeleteGraph(BackGroundImg);
+        DeleteGraph(BackGroundImg);
     }
 
     void Stage1BackGround::Update(float deltaTime)
@@ -24,6 +24,7 @@ namespace dream
     void Stage1BackGround::Draw()
     {
         //背景の表示
-        DrawGraph(0, 0, BackGroundImg, TRUE);
+        //DrawGraph(0, 0, BackGroundImg, TRUE);
+        DrawBox(700, 300, 1250, 500, GetColor(255, 255, 255), FALSE);
     }
 }
