@@ -1,6 +1,7 @@
 #include<DxLib.h>
 
 #include"Title.h"
+#include"../Stage1/Stage1.h"
 
 
 namespace dream
@@ -28,7 +29,7 @@ namespace dream
         if (stageTag.Stage1 == StageSelect::GetSelect())
         {
             GameObjectManager::ReleaseAllObj();
-            //return new Stage1;
+            return new Stage1;
         }
         if (stageTag.Stage2 == StageSelect::GetSelect())
         {

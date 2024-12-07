@@ -16,6 +16,11 @@ namespace dream
         //DeleteGraph(BackGroundImg);
     }
 
+    void Stage1BackGround::Update(float deltaTime)
+    {
+        Draw();
+    }
+
     void Stage1BackGround::Draw()
     {
         //”wŒi‚Ì•\Ž¦
