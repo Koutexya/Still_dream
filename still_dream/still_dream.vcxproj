@@ -164,6 +164,7 @@
     <ClInclude Include="Code\JsonMaster\JsonManager\JsonManager.h" />
     <ClInclude Include="Code\Object\GameObjectManager\GameObjectManager.h" />
     <ClInclude Include="Code\Object\GameObject\GameObject.h" />
+    <ClInclude Include="Code\Object\GameObject\Stage1ObjectTag.h" />
     <ClInclude Include="Code\Object\GameObject\TitleObjectTag.h" />
     <ClInclude Include="Code\Object\StageSelect\StageSelect.h" />
     <ClInclude Include="Code\Object\StageSelect\StageTag.h" />
