@@ -167,5 +167,8 @@
     <ClInclude Include="Code\Object\StageSelect\StageTag.h">
       <Filter>ソース ファイル\Object\StageSelect</Filter>
     </ClInclude>
+    <ClInclude Include="Code\Object\GameObject\Stage1ObjectTag.h">
+      <Filter>ソース ファイル\Object\GameObject</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
