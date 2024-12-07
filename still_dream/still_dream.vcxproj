@@ -154,6 +154,7 @@
     <ClCompile Include="Code\Object\Title\Ui\Ui.cpp" />
     <ClCompile Include="Code\Scene\SceneBase\SceneBase.cpp" />
     <ClCompile Include="Code\Scene\SceneManager\SceneManager.cpp" />
+    <ClCompile Include="Code\Scene\Stage1\Stage1.cpp" />
     <ClCompile Include="Code\Scene\Title\Title.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -174,6 +175,7 @@
     <ClInclude Include="Code\Object\Title\Ui\Ui.h" />
     <ClInclude Include="Code\Scene\SceneBase\SceneBase.h" />
     <ClInclude Include="Code\Scene\SceneManager\SceneManager.h" />
+    <ClInclude Include="Code\Scene\Stage1\Stage1.h" />
     <ClInclude Include="Code\Scene\Title\Title.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
