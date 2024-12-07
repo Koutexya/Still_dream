@@ -1,26 +1,26 @@
-#include"Ui.h"
+#include"TitleUi.h"
 
 namespace dream
 {
-    Ui::Ui()
+    TitleUi::TitleUi()
         :GameObject(titleObjectTag.UI)
     {
         SetFontSize(64);
         StageSelect::Initialize();
     }
 
-    Ui::~Ui()
+    TitleUi::~TitleUi()
     {
 
     }
 
-    void Ui::Update(float deltaTime)
+    void TitleUi::Update(float deltaTime)
     {
         Input();
         Draw();
     }
 
-    void Ui::Input()
+    void TitleUi::Input()
     {
         //タイトルのフェードイン表示が終わったら
         if (TitleFlg == false)
@@ -119,7 +119,7 @@ namespace dream
         }
     }
 
-    void Ui::Draw()
+    void TitleUi::Draw()
     {
         if (TitleScene == 0)
         {

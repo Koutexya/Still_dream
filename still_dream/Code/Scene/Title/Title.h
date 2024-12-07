@@ -3,7 +3,7 @@
 #include"../../Object/GameObjectManager/GameObjectManager.h"
 #include"../../Object/GameObject/TitleObjectTag.h"
 #include"../../Object/Title/BackGround/TitleBackGround.h"
-#include"../../Object/Title/Ui/Ui.h"
+#include"../../Object/Title/Ui/TitleUi.h"
 #include"../../Object/StageSelect/StageSelect.h"
 
 namespace dream
