@@ -7,6 +7,7 @@ namespace dream
 {
     class Stage1Player : public GameObject
     {
+    public:
         /// @brief  コンストラクタ
         Stage1Player();
 
