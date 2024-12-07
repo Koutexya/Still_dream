@@ -5,14 +5,14 @@
 
 namespace dream
 {
-    class BackGround : public GameObject
+    class Stage1BackGround : public GameObject
     {
     public:
         /// @brief  コンストラクタ
-        BackGround();
+        Stage1BackGround();
 
         /// @brief  デストラクタ
-        ~BackGround();
+        ~Stage1BackGround();
 
         /// @brief  更新処理
         /// @param  デルタタイム
