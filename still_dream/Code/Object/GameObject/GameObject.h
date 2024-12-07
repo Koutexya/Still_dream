@@ -7,6 +7,7 @@
 
 #include"../GameObjectManager/GameObjectManager.h"
 #include"TitleObjectTag.h"
+#include"Stage1ObjectTag.h"
 #include"../../JsonMaster/JsonManager/JsonManager.h"
 
 
