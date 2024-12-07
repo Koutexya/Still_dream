@@ -34,6 +34,6 @@ namespace dream
         int MusicVolume = 100;
 
 
-        static std::unique_ptr<StageSelect> stageselect;
+        
     };
 }

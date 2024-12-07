@@ -6,6 +6,7 @@ namespace dream
         :GameObject(titleObjectTag.UI)
     {
         SetFontSize(64);
+        StageSelect::Initialize();
     }
 
     Ui::~Ui()
@@ -41,7 +42,6 @@ namespace dream
                     if (Pos != 300)
                     {
                         Pos -= 200;
-                        stageselect->SetSelect(Pos);
                     }
                     KeyUpFlag = true;
                 }
@@ -65,6 +65,7 @@ namespace dream
             {
                 KeyDownFlag = false;
             }
+            
 
             //音量変更
             if (Pos == 700)
@@ -98,6 +99,21 @@ namespace dream
                 else
                 {
                     KeyRightFlag = false;
+                }
+            }
+            else
+            {
+                //エンターでプレイ先を決定
+                if (CheckHitKey(KEY_INPUT_RETURN))
+                {
+                    if (Pos == 300)
+                    {
+                        StageSelect::SetSelect(stageTag.Stage1);
+                    }
+                    if (Pos == 500)
+                    {
+                        StageSelect::SetSelect(stageTag.Stage2);
+                    }
                 }
             }
         }

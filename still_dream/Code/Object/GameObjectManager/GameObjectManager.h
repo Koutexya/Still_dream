@@ -6,6 +6,7 @@
 
 #include"../GameObject/GameObject.h"
 #include"../GameObject/TitleObjectTag.h"
+#include"../GameObject/Stage1ObjectTag.h"
 
 class GameObject;
 

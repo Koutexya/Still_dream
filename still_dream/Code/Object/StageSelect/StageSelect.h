@@ -1,5 +1,8 @@
 #pragma once
 #include<DxLib.h>
+#include<memory>
+
+#include"StageTag.h"
 
 
 namespace dream
@@ -7,19 +10,24 @@ namespace dream
     class StageSelect final
     {
     public:
-        /// @brief  コンストラクタ
-        StageSelect();
-
         /// @brief  デストラクタ
         ~StageSelect();
 
+        /// @brief  初期化
+        static void Initialize();
+
         /// @brief  選択したステージをセット
-        void SetSelect(int stage) { SelectNum = stage; }
+        static void SetSelect(std::string stage) { mInstance->SelectNum = stage; }
 
         /// @brief  選択したステージをゲット
-        int GetSelect() { return SelectNum; }
+        static std::string GetSelect() { return mInstance->SelectNum; }
 
     private:
-        int SelectNum = 0;
+        std::string SelectNum;
+
+        /// @brief  コンストラクタ
+        StageSelect();
+
+        static std::unique_ptr<StageSelect> mInstance;
     };
 }

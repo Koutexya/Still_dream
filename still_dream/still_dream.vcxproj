@@ -148,10 +148,13 @@
     <ClCompile Include="Code\main.cpp" />
     <ClCompile Include="Code\Object\GameObjectManager\GameObjectManager.cpp" />
     <ClCompile Include="Code\Object\GameObject\GameObject.cpp" />
-    <ClCompile Include="Code\Object\Title\BackGround\BackGround.cpp" />
+    <ClCompile Include="Code\Object\Stage1\BackGround\Stage1BackGround.cpp" />
+    <ClCompile Include="Code\Object\StageSelect\StageSelect.cpp" />
+    <ClCompile Include="Code\Object\Title\BackGround\TitleBackGround.cpp" />
     <ClCompile Include="Code\Object\Title\Ui\Ui.cpp" />
     <ClCompile Include="Code\Scene\SceneBase\SceneBase.cpp" />
     <ClCompile Include="Code\Scene\SceneManager\SceneManager.cpp" />
+    <ClCompile Include="Code\Scene\Stage1\Stage1.cpp" />
     <ClCompile Include="Code\Scene\Title\Title.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -163,12 +166,16 @@
     <ClInclude Include="Code\JsonMaster\JsonManager\JsonManager.h" />
     <ClInclude Include="Code\Object\GameObjectManager\GameObjectManager.h" />
     <ClInclude Include="Code\Object\GameObject\GameObject.h" />
+    <ClInclude Include="Code\Object\GameObject\Stage1ObjectTag.h" />
     <ClInclude Include="Code\Object\GameObject\TitleObjectTag.h" />
+    <ClInclude Include="Code\Object\Stage1\BackGround\Stage1BackGround.h" />
     <ClInclude Include="Code\Object\StageSelect\StageSelect.h" />
-    <ClInclude Include="Code\Object\Title\BackGround\BackGround.h" />
+    <ClInclude Include="Code\Object\StageSelect\StageTag.h" />
+    <ClInclude Include="Code\Object\Title\BackGround\TitleBackGround.h" />
     <ClInclude Include="Code\Object\Title\Ui\Ui.h" />
     <ClInclude Include="Code\Scene\SceneBase\SceneBase.h" />
     <ClInclude Include="Code\Scene\SceneManager\SceneManager.h" />
+    <ClInclude Include="Code\Scene\Stage1\Stage1.h" />
     <ClInclude Include="Code\Scene\Title\Title.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

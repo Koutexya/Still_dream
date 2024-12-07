@@ -1,22 +1,20 @@
 #pragma once
 #include"../SceneBase/SceneBase.h"
 #include"../../Object/GameObjectManager/GameObjectManager.h"
-#include"../../Object/GameObject/TitleObjectTag.h"
-#include"../../Object/Title/BackGround/TitleBackGround.h"
-#include"../../Object/Title/Ui/Ui.h"
-#include"../../Object/StageSelect/StageSelect.h"
+#include"../../Object/GameObject/Stage1ObjectTag.h"
+#include"../../Object/Stage1/BackGround/Stage1BackGround.h"
 
 namespace dream
 {
-    /// @brief  タイトル画面の進行管理クラス
-    class Title :public SceneBase
+    /// @brief  Stage1画面の進行管理クラス
+    class Stage1 :public SceneBase
     {
     public:
         /// @brief  コンストラクタ
-        Title();
+        Stage1();
 
         /// @brief  デストラクタ
-        ~Title();
+        ~Stage1();
 
         /// @brief  シーン更新処理
         /// @param deltaTime=デルタタイム
@@ -25,5 +23,7 @@ namespace dream
 
         /// @brief  シーン更新処理
         void Draw()override;
+
+    private:
     };
 }

@@ -10,7 +10,7 @@ namespace dream
         //現在のシーン
         GameObjectManager::NowSceneSet(TitleObjectTagOrder);
         //生成
-        GameObjectManager::Entry(new BackGround);
+        GameObjectManager::Entry(new TitleBackGround);
         GameObjectManager::Entry(new Ui);
     }
 
@@ -23,12 +23,18 @@ namespace dream
     {
         //全ゲームオブジェクトの更新
         GameObjectManager::Update(deltaTime);
+        
         //シーン切り替え
-        /*if (CheckHitKey(KEY_INPUT_RETURN))
+        if (stageTag.Stage1 == StageSelect::GetSelect())
         {
-            GameObjectManager::releaseallobjをする
-            return new Play;
-        }*/
+            GameObjectManager::ReleaseAllObj();
+            //return new Stage1;
+        }
+        if (stageTag.Stage2 == StageSelect::GetSelect())
+        {
+            GameObjectManager::ReleaseAllObj();
+            //return new Stage2;
+        }
         return this;
     }
 
