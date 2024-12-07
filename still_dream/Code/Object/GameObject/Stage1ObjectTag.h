@@ -8,7 +8,7 @@ namespace dream
     static struct Stage1ObjectTag
     {
         std::string BACKGROUND = "background";
-        std::string STAGE = "stage";
+        std::string MAP = "map";
         std::string PLAYER = "player";
         std::string UI = "ui";
 
@@ -19,7 +19,7 @@ namespace dream
     static std::vector<std::string>Stage1ObjectTagOrder
     {
         stage1ObjectTag.BACKGROUND,
-        stage1ObjectTag.STAGE,
+        stage1ObjectTag.MAP,
         stage1ObjectTag.PLAYER,
         stage1ObjectTag.UI
     };
