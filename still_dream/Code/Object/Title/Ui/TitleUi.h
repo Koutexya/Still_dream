@@ -26,7 +26,8 @@ namespace dream
     private:
         int TitleScene = 0; //TitleScene=0でタイトルフェードイン表示　TitleScene=1で選択画面
         bool TitleFlg = true;   //フェードイン表示フラグ
-        bool KeyUpFlag = false; //入力フラグ
+        bool KeySpaceFlag = false;//入力フラグ
+        bool KeyUpFlag = false;
         bool KeyDownFlag = false;
         bool KeyLeftFlag = false;
         bool KeyRightFlag = false;

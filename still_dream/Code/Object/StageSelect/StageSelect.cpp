@@ -17,6 +17,7 @@ namespace dream
 
     void StageSelect::Initialize()
     {
+        mInstance = nullptr;
         //自身の中身が空ならインスタンス生成
         if (!mInstance)
         {
