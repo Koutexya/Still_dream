@@ -31,7 +31,15 @@ namespace dream
                 //タイトル表示から次に進む
                 if (CheckHitKey(KEY_INPUT_SPACE))
                 {
-                    TitleScene = 1;
+                    if (KeySpaceFlag == false)
+                    {
+                        TitleScene = 1;
+                        KeySpaceFlag = true;
+                    }
+                }
+                else
+                {
+                    KeySpaceFlag = false;
                 }
             }
         }
