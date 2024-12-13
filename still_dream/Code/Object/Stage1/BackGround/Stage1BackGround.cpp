@@ -25,6 +25,6 @@ namespace dream
     {
         //”wŒi‚Ì•\Ž¦
         //DrawGraph(0, 0, BackGroundImg, TRUE);
-        DrawBox(700, 300, 1250, 500, GetColor(255, 255, 255), FALSE);
+        
     }
 }
