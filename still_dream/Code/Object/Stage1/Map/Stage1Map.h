@@ -1,6 +1,12 @@
 #pragma once
 #include"../../GameObject/GameObject.h"
 
+#include<DxLib.h>
+#include<fstream>
+#include<iostream>
+#include<sstream>
+#include<string>
+
 
 namespace dream
 {
@@ -27,6 +33,9 @@ namespace dream
         /// @brief  描画処理
         void Draw()override;
 
+        /// @brief  マップ描画
+        void mapDraw(int scrollOffsetX, int scrollOffsetY);
+
         /// @brief マップローダー
         /// @param dst 初期化したいマップデータ
         /// @param mapCSVFileName マップファイル名
@@ -39,13 +48,13 @@ namespace dream
 
         /// @brief マップのレイヤーを描画
         /// @param layer 描画したいレイヤー
-        void mapLayerDraw(MapLayer& layer, int scrollOffsetX, int ScrollOffsetY);
+        void mapLayerDraw(MapLayer& layer, int scrollOffsetX, int scrollOffsetY);
 
     private:
 
         const int mapChipSize = 100;
-        const int mapImgXNum = 20;
-        const int mapImgYNum = 10;
+        const int mapImgXNum = 2;
+        const int mapImgYNum = 1;
 
         MapLayer layerBrock;
 
