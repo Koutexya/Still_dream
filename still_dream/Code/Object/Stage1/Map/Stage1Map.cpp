@@ -29,7 +29,6 @@ namespace dream
 
     void Stage1Map::Draw()
     {
-        DrawBox(700, 300, 800, 400, GetColor(255, 255, 255), FALSE);
         mapLayerDraw(layerBrock, 0, 0);
     }
 
@@ -50,7 +49,7 @@ namespace dream
                 int imgHandle = mapChipImg[imgIndex];  // indexをつかって画像ハンドル配列から画像ハンドルを取得
 
                 // マップチップ幅でブロック画像を敷き詰めて描画する
-                // xは0,1,2・・・と変化する。 x * mapChipSize の計算は 0,64,128,196, ... とブロック幅ごとに増える
+                // xは0,1,2・・・と変化する。 x * mapChipSize の計算は 0,100,200, ... とブロック幅ごとに増える
                 DrawGraph(x * mapChipSize - scrollOffsetX, y * mapChipSize - scrollOffsetY, imgHandle, TRUE);
             }
         }

@@ -1,5 +1,6 @@
 #pragma once
 #include<DxLib.h>
+#include<vector>
 
 #include"../../GameObject/GameObject.h"
 
@@ -25,6 +26,17 @@ namespace dream
         void Input()override;
 
     private:
+        VECTOR mPos;
 
+        const float gravity = 20.0f;    //重力
+        const float jumpInitVelocity = 5.5f;    //ジャンプ初速度
+
+
+        int PlayerHandle;   //画像
+        float vx, vy;   //速度
+        bool jumpFlag;  //ジャンプフラグ
+        bool prevJumpButton;    //前フレームでジャンプボタンが押されていたか
+        bool isJumpPush;    //ジャンプ押した瞬間か
+        bool onGround;  //接地ふらぐ
     };
 }
