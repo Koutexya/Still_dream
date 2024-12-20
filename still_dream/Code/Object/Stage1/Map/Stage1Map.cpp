@@ -5,7 +5,7 @@ namespace dream
     Stage1Map::Stage1Map()
         :GameObject(stage1ObjectTag.MAP)
     {
-        LoadDivGraph("Asset/Image/map.png", mapImgXNum * mapImgYNum, mapImgXNum, mapImgYNum, mapChipSize, mapChipSize,mapChipImg);
+        LoadDivGraph("Asset/Image/map2.png", mapImgXNum * mapImgYNum, mapImgXNum, mapImgYNum, mapChipSize, mapChipSize,mapChipImg);
         
         //É}ÉbÉvì«Ç›çûÇ›
         mapLayerLoader(layerBrock, "Asset/Csv/map1.csv");
