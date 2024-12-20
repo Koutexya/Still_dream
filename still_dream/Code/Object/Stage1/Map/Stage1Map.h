@@ -6,6 +6,7 @@
 #include<iostream>
 #include<sstream>
 #include<string>
+#include<algorithm>
 
 
 namespace dream
@@ -13,8 +14,8 @@ namespace dream
     struct MapLayer
     {
         int** mapData; // マップチップの2次元配列
-        int   mapXNum; // マップチップが横方向に並んでいる数
-        int   mapYNum; // マップチップが縦方向に並んでいる数
+        int   mapXNum = 50; // マップチップが横方向に並んでいる数
+        int   mapYNum = 10; // マップチップが縦方向に並んでいる数
     };
 
     class Stage1Map : public GameObject
