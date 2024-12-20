@@ -6,9 +6,9 @@ namespace dream
         :GameObject(stage1ObjectTag.MAP)
     {
         LoadDivGraph("Asset/Image/map.png", mapImgXNum * mapImgYNum, mapImgXNum, mapImgYNum, mapChipSize, mapChipSize,mapChipImg);
-
+        
         //マップ読み込み
-        mapLayerLoader(layerBrock, "Asset/Csv/map.csv");
+        mapLayerLoader(layerBrock, "Asset/Csv/map1.csv");
     }
 
     Stage1Map::~Stage1Map()
@@ -30,11 +30,7 @@ namespace dream
     void Stage1Map::Draw()
     {
         DrawBox(700, 300, 800, 400, GetColor(255, 255, 255), FALSE);
-    }
-
-    void Stage1Map::mapDraw(int scrollOffsetX, int scrollOffsetY)
-    {
-        mapLayerDraw(layerBrock, scrollOffsetX, scrollOffsetY);
+        mapLayerDraw(layerBrock, 0, 0);
     }
 
     void Stage1Map::mapLayerDraw(MapLayer& layer, int scrollOffsetX, int scrollOffsetY)
@@ -45,11 +41,11 @@ namespace dream
             {
                 int imgIndex = layer.mapData[y][x];              // map配列よりブロック種類を取得
 
-                //描画しようとしているidが-1の時は描画をスキップ
-                if (imgIndex == -1)
-                {
-                    continue;
-                }
+                ////描画しようとしているidが-1の時は描画をスキップ
+                //if (imgIndex == -1)
+                //{
+                //    continue;
+                //}
 
                 int imgHandle = mapChipImg[imgIndex];  // indexをつかって画像ハンドル配列から画像ハンドルを取得
 
@@ -63,9 +59,7 @@ namespace dream
 	bool Stage1Map::mapLayerLoader(MapLayer& dst, const char* mapCSVFileName)
 	{
 		// dst初期化
-		dst.mapData = NULL;
-		dst.mapXNum = 0;
-		dst.mapYNum = 0;
+		//dst.mapData = NULL;
 
 		// ファイルを開く
         std::ifstream ifs(mapCSVFileName);
@@ -75,24 +69,31 @@ namespace dream
             return 0;
         }
 
-        char c = 0;
-        while (c != '\n')
+        ////配列確保
+        dst.mapData = new int* [dst.mapYNum];
+        int ix, iy;
+        for (iy = 0; iy < dst.mapYNum; iy++)
         {
-            //読み取った文字がカンマなら1つカウントを増やす
-            ifs >> c;
-            if (',' == c)
+            dst.mapData[iy] = new int[dst.mapXNum];
+        }
+
+        std::string Len;
+        //ファイルポインタを先頭に戻す
+        ifs.seekg(0, std::ios_base::beg);
+
+        //ファイルからデータを配列に移す
+        for (iy = 0; iy < dst.mapYNum; iy++)
+        {
+            //１行読み込み
+            std::getline(ifs, Len);
+            std::replace(Len.begin(), Len.end(), ',', ' '); //文字列の特定文字を変更
+            std::istringstream iss(Len);
+
+            for (ix = 0; ix < dst.mapXNum; ix++)
             {
-                dst.mapXNum++;
+                iss >> dst.mapData[iy][ix];
             }
         }
-        dst.mapXNum++;
-
-        //ファイルポインタを先頭に戻し行数を読む
-        ifs.seekg(0,std::ios_base::beg);
-        bool firstRow = true;
-        std::string Len;
-        while(ifs>>Len)
-
         
         return true;
 	}
