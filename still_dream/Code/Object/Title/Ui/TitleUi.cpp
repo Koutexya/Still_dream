@@ -16,11 +16,11 @@ namespace dream
 
     void TitleUi::Update(float deltaTime)
     {
-        Input();
+        Input(deltaTime);
         Draw();
     }
 
-    void TitleUi::Input()
+    void TitleUi::Input(float deltaTime)
     {
         
         if (TitleScene == 0)

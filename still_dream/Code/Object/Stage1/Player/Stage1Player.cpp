@@ -11,6 +11,7 @@ namespace dream
         prevJumpButton = false;
         isJumpPush = false;
         onGround = false;
+        jumpTimer = jumpButtonAcceptTime;
 
         PlayerHandle = LoadGraph("Asset/Image/Character.png");
     }
@@ -22,6 +23,7 @@ namespace dream
 
     void Stage1Player::Update(float deltaTime)
     {
+        Input(deltaTime);
         Draw();
     }
 
@@ -30,12 +32,19 @@ namespace dream
         DrawGraph(mPos.x, mPos.y, PlayerHandle, TRUE);
     }
 
-    void Stage1Player::Input()
+    void Stage1Player::Input(float deltaTime)
     {
+        //当たり判定作ったら書き換え　この条件の時ジャンプ可能
+        if (mPos.y == 800)
+        {
+            onGround = true;
+        }
+
         if (onGround)   //接地してるとき
         {
             jumpFlag = false;
             vy = 0.0f;
+            jumpTimer = jumpButtonAcceptTime;
         }
         else
         {
@@ -61,11 +70,27 @@ namespace dream
         }
 
         //ジャンプ可能でジャンプキーが押された
-        if (isJumpPush && !jumpFlag)
+        if (isJumpPush && !jumpFlag && jumpTimer>0.0f)
         {
             vy -= jumpInitVelocity;
             jumpFlag = true;
             onGround = false;
         }
+
+        // ジャンプ長押し中で上昇タイマー期間なら上昇
+        if (prevJumpButton && jumpTimer > 0.0f)
+        {
+            vy -= jumpUpSpeed * deltaTime;
+        }
+
+        //ジャンプ中重力発生
+        if (jumpFlag)
+        {
+            jumpTimer -= deltaTime;
+            vy += gravity * deltaTime;
+        }
+
+        //位置更新
+        mPos.y += vy;
     }
 }

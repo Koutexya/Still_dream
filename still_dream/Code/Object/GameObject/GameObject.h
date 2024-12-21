@@ -32,7 +32,7 @@ namespace dream
         virtual void Draw() = 0;
 
         /// @brief  ‘€ìˆ—
-        virtual void Input() {};
+        virtual void Input(float deltaTime) {};
 
         /// @brief  “®‚«ˆ—
         /// @param  KeyType=“ü—Í‚³‚ê‚½ƒL[

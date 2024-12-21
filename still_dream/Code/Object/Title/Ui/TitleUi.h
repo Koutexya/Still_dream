@@ -21,7 +21,7 @@ namespace dream
         void Draw()override;
 
         /// @brief 入力処理
-        void Input()override;
+        void Input(float deltaTime)override;
 
     private:
         int TitleScene = 0; //TitleScene=0でタイトルフェードイン表示　TitleScene=1で選択画面
