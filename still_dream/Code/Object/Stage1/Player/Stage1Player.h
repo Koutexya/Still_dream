@@ -2,6 +2,7 @@
 #include<DxLib.h>
 
 #include"../../GameObject/GameObject.h"
+#include"../../Collision/Collision.h"
 
 namespace dream
 {
@@ -24,8 +25,31 @@ namespace dream
         /// @brief  入力処理
         void Input(float deltaTime)override;
 
+        ///@brief   プレイヤーの当たり判定矩形を返す
+        ///@return  プレイヤーの当たり判定矩形
+        sHitRect getPlayerHitRect();
+
+        ///@brief   地面に立っているか
+        ///@param   足元の当たり判定結果
+        void playerSetGroundFlg(bool groundFlg);
+
+        ///@brief   頭を壁にぶつけたか
+        ///@param   頭の当たり判定結果
+        void playerSetHeadHitFlg(bool headHitFlg);
+
+        ///@brief   プレイヤーの足元コライダーのゲット
+        ///@return  足元コライダーの矩形情報
+        sHitRect playerGetGroundCollider();
+
+        ///@brief   プレイヤーの頭上コライダーのゲット
+        ///@return  頭上コライダーの矩形情報
+        sHitRect playerGetHeadCollider();
+
     private:
         POINT mPos;
+        sHitRect playerHit; //プレイヤー当たり判定
+        sHitRect playerFootCollider;    //接地コライダー
+        sHitRect playerHeadCollider;    //頭上コライダー
 
         const float gravity = 20.0f;    //重力
         const float jumpInitVelocity = 5.5f;    //ジャンプ初速度
@@ -37,7 +61,8 @@ namespace dream
         bool jumpFlag;  //ジャンプフラグ
         bool prevJumpButton;    //前フレームでジャンプボタンが押されていたか
         bool isJumpPush;    //ジャンプ押した瞬間か
-        bool onGround;  //接地ふらぐ
         float jumpTimer;    //ジャンプ長押し時間タイマー
+        bool onGround;  //接地しているか
+        bool hitHead;   //頭がぶつかったか
     };
 }

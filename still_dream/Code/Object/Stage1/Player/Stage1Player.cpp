@@ -12,8 +12,9 @@ namespace dream
         jumpFlag = false;
         prevJumpButton = false;
         isJumpPush = false;
-        onGround = false;
         jumpTimer = jumpButtonAcceptTime;
+        onGround = false;
+        hitHead = false;
 
         PlayerHandle = LoadGraph("Asset/Image/Character.png");
     }
@@ -92,7 +93,37 @@ namespace dream
             vy += gravity * deltaTime;
         }
 
+        if()
+
+
         //à íuçXêV
         mPos.y += vy;
     }
+
+    sHitRect Stage1Player::getPlayerHitRect()
+    {
+        return playerHit;
+    }
+
+    void Stage1Player::playerSetGroundFlg(bool groundFlg)
+    {
+        onGround = groundFlg;
+    }
+
+    void Stage1Player::playerSetHeadHitFlg(bool headHitFlg)
+    {
+        hitHead = headHitFlg;
+    }
+
+    sHitRect Stage1Player::playerGetGroundCollider()
+    {
+        return playerFootCollider;
+    }
+
+    sHitRect Stage1Player::playerGetHeadCollider()
+    {
+        return playerHeadCollider;
+    }
+
+
 }
