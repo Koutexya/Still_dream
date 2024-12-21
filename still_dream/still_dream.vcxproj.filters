@@ -70,26 +70,26 @@
     <Filter Include="ソース ファイル\Object\StageSelect">
       <UniqueIdentifier>{f5931b36-ea96-4174-aa29-f36a9276470f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Object\Stage1">
-      <UniqueIdentifier>{a2be73cb-5b99-470f-b1ba-f8eed97f14d4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Object\Stage1\BackGround">
-      <UniqueIdentifier>{5cff541b-8c56-4685-84cf-5f084b5dcfa0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\Scene\Stage1">
       <UniqueIdentifier>{37062c96-2ba9-4aea-987d-8e1bbfd459bf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Object\Stage1\Map">
-      <UniqueIdentifier>{d3a6f7ad-fbf9-411e-b378-3f21c4b919aa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Object\Stage1\Player">
-      <UniqueIdentifier>{b8afe52f-ab5a-434a-a05c-c04add1ae37a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Object\Stage1\Ui">
-      <UniqueIdentifier>{8d7459d5-f073-457c-b6d8-bc7a2e26b5a0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\Object\Collision">
       <UniqueIdentifier>{9b9770ac-489c-404f-9753-0350f645c019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Object\Stage">
+      <UniqueIdentifier>{a2be73cb-5b99-470f-b1ba-f8eed97f14d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Object\Stage\BackGround">
+      <UniqueIdentifier>{5cff541b-8c56-4685-84cf-5f084b5dcfa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Object\Stage\Map">
+      <UniqueIdentifier>{d3a6f7ad-fbf9-411e-b378-3f21c4b919aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Object\Stage\Player">
+      <UniqueIdentifier>{b8afe52f-ab5a-434a-a05c-c04add1ae37a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Object\Stage\Ui">
+      <UniqueIdentifier>{8d7459d5-f073-457c-b6d8-bc7a2e26b5a0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -142,16 +142,16 @@
       <Filter>ソース ファイル\Scene\Stage1</Filter>
     </ClCompile>
     <ClCompile Include="Code\Object\Stage1\BackGround\Stage1BackGround.cpp">
-      <Filter>ソース ファイル\Object\Stage1\BackGround</Filter>
+      <Filter>ソース ファイル\Object\Stage\BackGround</Filter>
     </ClCompile>
     <ClCompile Include="Code\Object\Stage1\Map\Stage1Map.cpp">
-      <Filter>ソース ファイル\Object\Stage1\Map</Filter>
+      <Filter>ソース ファイル\Object\Stage\Map</Filter>
     </ClCompile>
     <ClCompile Include="Code\Object\Stage1\Player\Stage1Player.cpp">
-      <Filter>ソース ファイル\Object\Stage1\Player</Filter>
+      <Filter>ソース ファイル\Object\Stage\Player</Filter>
     </ClCompile>
     <ClCompile Include="Code\Object\Stage1\Ui\Stage1Ui.cpp">
-      <Filter>ソース ファイル\Object\Stage1\Ui</Filter>
+      <Filter>ソース ファイル\Object\Stage\Ui</Filter>
     </ClCompile>
     <ClCompile Include="Code\Object\Collision\Collision.cpp">
       <Filter>ソース ファイル\Object\Collision</Filter>
@@ -210,19 +210,19 @@
       <Filter>ソース ファイル\Scene\Stage1</Filter>
     </ClInclude>
     <ClInclude Include="Code\Object\Stage1\BackGround\Stage1BackGround.h">
-      <Filter>ソース ファイル\Object\Stage1\BackGround</Filter>
+      <Filter>ソース ファイル\Object\Stage\BackGround</Filter>
     </ClInclude>
     <ClInclude Include="Code\Object\GameObject\Stage1ObjectTag.h">
       <Filter>ソース ファイル\Object\GameObject</Filter>
     </ClInclude>
     <ClInclude Include="Code\Object\Stage1\Map\Stage1Map.h">
-      <Filter>ソース ファイル\Object\Stage1\Map</Filter>
+      <Filter>ソース ファイル\Object\Stage\Map</Filter>
     </ClInclude>
     <ClInclude Include="Code\Object\Stage1\Player\Stage1Player.h">
-      <Filter>ソース ファイル\Object\Stage1\Player</Filter>
+      <Filter>ソース ファイル\Object\Stage\Player</Filter>
     </ClInclude>
     <ClInclude Include="Code\Object\Stage1\Ui\Stage1Ui.h">
-      <Filter>ソース ファイル\Object\Stage1\Ui</Filter>
+      <Filter>ソース ファイル\Object\Stage\Ui</Filter>
     </ClInclude>
     <ClInclude Include="Code\Object\Collision\Collision.h">
       <Filter>ソース ファイル\Object\Collision</Filter>

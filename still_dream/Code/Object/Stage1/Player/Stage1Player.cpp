@@ -7,6 +7,8 @@ namespace dream
     {
         mPos.x = 200;
         mPos.y = 800;
+        vx = 0.0f;
+        vy = 0.0f;
         jumpFlag = false;
         prevJumpButton = false;
         isJumpPush = false;
