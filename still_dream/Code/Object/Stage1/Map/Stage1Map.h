@@ -1,5 +1,6 @@
 #pragma once
 #include"../../GameObject/GameObject.h"
+#include"../../Collision/Collision.h"
 
 #include<DxLib.h>
 #include<fstream>
@@ -34,9 +35,6 @@ namespace dream
         /// @brief  描画処理
         void Draw()override;
 
-        /// @brief  マップ描画
-        void mapDraw(int scrollOffsetX, int scrollOffsetY);
-
         /// @brief マップローダー
         /// @param dst 初期化したいマップデータ
         /// @param mapCSVFileName マップファイル名
@@ -50,6 +48,13 @@ namespace dream
         /// @brief マップのレイヤーを描画
         /// @param layer 描画したいレイヤー
         void mapLayerDraw(MapLayer& layer, int scrollOffsetX, int scrollOffsetY);
+
+        /// <summary>
+        /// マップ後始末
+        /// </summary>
+        /// <param name ="checkRect">マップと当たっているか調査したい矩形</param>
+        /// <returns>マップと衝突したかをtrue/falseで返す</returns>
+        bool mapHitCalc(MapLayer& dst, sHitRect& checkRect, int cnt);
 
     private:
 
