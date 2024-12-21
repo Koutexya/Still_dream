@@ -1,6 +1,5 @@
 #pragma once
 #include<DxLib.h>
-#include<vector>
 
 #include"../../GameObject/GameObject.h"
 
@@ -23,14 +22,15 @@ namespace dream
         void Draw()override;
 
         /// @brief  入力処理
-        void Input()override;
+        void Input(float deltaTime)override;
 
     private:
-        VECTOR mPos;
+        POINT mPos;
 
         const float gravity = 20.0f;    //重力
         const float jumpInitVelocity = 5.5f;    //ジャンプ初速度
-
+        const float jumpUpSpeed = 12.0f;//ジャンプ長押し中上昇速度
+        const float jumpButtonAcceptTime = 0.95f;   //ジャンプ長押し受付時間
 
         int PlayerHandle;   //画像
         float vx, vy;   //速度
@@ -38,5 +38,6 @@ namespace dream
         bool prevJumpButton;    //前フレームでジャンプボタンが押されていたか
         bool isJumpPush;    //ジャンプ押した瞬間か
         bool onGround;  //接地ふらぐ
+        float jumpTimer;    //ジャンプ長押し時間タイマー
     };
 }
