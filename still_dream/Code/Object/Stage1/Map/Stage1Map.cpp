@@ -6,6 +6,7 @@ namespace dream
     Stage1Map::Stage1Map()
         :GameObject(stage1ObjectTag.MAP)
     {
+
         LoadDivGraph("Asset/Image/map2.png", mapImgXNum * mapImgYNum, mapImgXNum, mapImgYNum, mapChipSize, mapChipSize,mapChipImg);
         
         //マップ読み込み
@@ -59,7 +60,7 @@ namespace dream
 	bool Stage1Map::mapLayerLoader(MapLayer& dst, const char* mapCSVFileName)
 	{
 		// dst初期化
-		//dst.mapData = NULL;
+		dst.mapData = NULL;
 
 		// ファイルを開く
         std::ifstream ifs(mapCSVFileName);
@@ -113,37 +114,40 @@ namespace dream
 		dst.mapYNum = 0;
 	}
 
-    bool Stage1Map::mapHitCalc(MapLayer& dst, sHitRect& checkRect, int cnt)
+    bool Stage1Map::mapHitCalc(MapLayer& dst, Collision::sHitRect& checkRect)
     {
         bool hitflg = false;
-        sHitRect blockRect;
+        Collision::sHitRect blockRect;
 
         // すべてのマップブロック vs 調査ブロックの衝突を調べる
         for (int iy = 0; iy < dst.mapYNum; iy++)
         {
             //マップブロックのY座標
-            blockRect.worldLY = iy * static_cast<float>(mapChipSize);
-            blockRect.worldRY = (iy + 1) * static_cast<float>(mapChipSize);
+            blockRect.worldLY = iy * static_cast<float>(100);
+            blockRect.worldRY = (iy + 1) * static_cast<float>(100);
             for (int ix = 0; ix < dst.mapXNum; ix++)
             {
                 // 当たりブロックか 1→通れる 1以外→通れない 
-                if (cnt == 1 && dst.mapData[iy][ix] != 1)
+                if (dst.mapData[iy][ix] != 0)
                 {
                     // マップブロックのX座標
-                    blockRect.worldLX = ix * static_cast<float>(mapChipSize);
-                    blockRect.worldRX = (ix + 1) * static_cast<float>(mapChipSize);
+                    blockRect.worldLX = ix * static_cast<float>(100);
+                    blockRect.worldRX = (ix + 1) * static_cast<float>(100);
                     // 当たっているか？
-                    if (isHitRect(checkRect, blockRect))
+                    if (Collision::isHitRect(checkRect, blockRect))
                     {
                         // 一度でもブロックと当たったらhitflgをtrueに
                         hitflg = true;
                         //第一引数：キャラクターなどの当たり判定で動かす方の矩形
                         //第二引数：マップなどの固定物の矩形を入れる
-                        clacFixHitReactPosition(checkRect, blockRect);
+                        Collision::clacFixHitReactPosition(checkRect, blockRect);
                     }
                 }
             }
         }
         return hitflg;
     }
+
+    
+
 }

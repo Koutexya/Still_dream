@@ -12,16 +12,18 @@
 
 namespace dream
 {
-    struct MapLayer
-    {
-        int** mapData; // マップチップの2次元配列
-        int   mapXNum = 50; // マップチップが横方向に並んでいる数
-        int   mapYNum = 10; // マップチップが縦方向に並んでいる数
-    };
+    
 
     class Stage1Map : public GameObject
     {
     public:
+        struct MapLayer
+        {
+            int** mapData; // マップチップの2次元配列
+            int   mapXNum = 50; // マップチップが横方向に並んでいる数
+            int   mapYNum = 10; // マップチップが縦方向に並んでいる数
+        };
+
         /// @brief  コンストラクタ
         Stage1Map();
 
@@ -54,9 +56,14 @@ namespace dream
         /// </summary>
         /// <param name ="checkRect">マップと当たっているか調査したい矩形</param>
         /// <returns>マップと衝突したかをtrue/falseで返す</returns>
-        bool mapHitCalc(MapLayer& dst, sHitRect& checkRect, int cnt);
+        static bool mapHitCalc(MapLayer& dst, Collision::sHitRect& checkRect);
 
+
+        MapLayer getMapHitRect() { return layerBrock; };
+
+        
     private:
+        
 
         const int mapChipSize = 100;
         const int mapImgXNum = 2;
