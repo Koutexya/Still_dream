@@ -3,6 +3,7 @@
 
 #include"../../GameObject/GameObject.h"
 #include"../../Collision/Collision.h"
+#include"../Map/Stage1Map.h"
 
 namespace dream
 {
@@ -25,9 +26,15 @@ namespace dream
         /// @brief  入力処理
         void Input(float deltaTime)override;
 
+        /// <summary>
+        /// 当たり判定矩形からプレイヤー位置を修正する
+        /// </summary>
+        /// <param name="hitRect">当たり判定矩形</param>
+        void playerfixColPosition(Collision::sHitRect& hitRect);
+
         ///@brief   プレイヤーの当たり判定矩形を返す
         ///@return  プレイヤーの当たり判定矩形
-        sHitRect getPlayerHitRect();
+        Collision::sHitRect getPlayerHitRect();
 
         ///@brief   地面に立っているか
         ///@param   足元の当たり判定結果
@@ -39,17 +46,19 @@ namespace dream
 
         ///@brief   プレイヤーの足元コライダーのゲット
         ///@return  足元コライダーの矩形情報
-        sHitRect playerGetGroundCollider();
+        Collision::sHitRect playerGetGroundCollider();
 
         ///@brief   プレイヤーの頭上コライダーのゲット
         ///@return  頭上コライダーの矩形情報
-        sHitRect playerGetHeadCollider();
+        Collision::sHitRect playerGetHeadCollider();
 
     private:
+        Stage1Map stage1;
+
         POINT mPos;
-        sHitRect playerHit; //プレイヤー当たり判定
-        sHitRect playerFootCollider;    //接地コライダー
-        sHitRect playerHeadCollider;    //頭上コライダー
+        Collision::sHitRect playerHit; //プレイヤー当たり判定
+        Collision::sHitRect playerFootCollider;    //接地コライダー
+        Collision::sHitRect playerHeadCollider;    //頭上コライダー
 
         const float gravity = 20.0f;    //重力
         const float jumpInitVelocity = 5.5f;    //ジャンプ初速度
