@@ -2,12 +2,9 @@
 
 namespace dream
 {
-    //実体の中身を空に
-    std::unique_ptr<Collision>Collision::mInstance = nullptr;
 
     Collision::Collision()
     {
-        mInstance = nullptr;
     }
 
     Collision::~Collision()
@@ -15,15 +12,6 @@ namespace dream
 
     }
 
-    void Collision::Initialize()
-    {
-        mInstance = nullptr;
-        //自身の中身が空ならインスタンス生成
-        if (!mInstance)
-        {
-            mInstance.reset(new Collision);
-        }
-    }
 
     //当たり判定初期化
     void Collision::initRect(sHitRect& dstRect, float w, float h)
@@ -70,19 +58,14 @@ namespace dream
     //2つの矩形の衝突めり込み量を計算
     void Collision::clacFixHitReactPosition(sHitRect& movableRect, const sHitRect& staticRect)
     {
-        //変数宣言
-        float left;
-        float right;
-        float up;
-        float down;
+       //押し戻し距離を計算
+        float left = staticRect.worldLX - movableRect.worldRX;
+        float right = staticRect.worldRX - movableRect.worldLX;
+        float up = staticRect.worldLY - movableRect.worldRY;
+        float down = staticRect.worldRY - movableRect.worldLY;
         float dx;   //押し戻された横
         float dy;   //押し戻された縦
-
-        //押し戻し距離を計算
-        left = staticRect.worldLX - movableRect.worldRX;
-        right = staticRect.worldRX - movableRect.worldLX;
-        up = staticRect.worldLY - movableRect.worldRY;
-        down = staticRect.worldRY - movableRect.worldLY;
+        
 
         //fabs() カッコ内に変数が絶対値を求める関数
         //dxはx方向の最短押し戻し移動量

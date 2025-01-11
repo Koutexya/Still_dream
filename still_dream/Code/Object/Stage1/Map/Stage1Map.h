@@ -69,6 +69,8 @@ namespace dream
         static const int mapImgXNum = 2;
         static const int mapImgYNum = 1;
 
+        int scrollcnt = 0;
+
         MapLayer layerBrock;
 
         int mapChipImg[64]; //‰æ‘œƒnƒ“ƒhƒ‹”z—ñ
