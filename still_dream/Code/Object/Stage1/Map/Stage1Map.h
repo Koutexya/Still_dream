@@ -63,11 +63,11 @@ namespace dream
 
         
     private:
-        
+        static Collision collision;
 
-        const int mapChipSize = 100;
-        const int mapImgXNum = 2;
-        const int mapImgYNum = 1;
+        static const int mapChipSize = 100;
+        static const int mapImgXNum = 2;
+        static const int mapImgYNum = 1;
 
         MapLayer layerBrock;
 

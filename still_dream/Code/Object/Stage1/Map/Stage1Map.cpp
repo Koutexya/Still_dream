@@ -42,12 +42,6 @@ namespace dream
             {
                 int imgIndex = layer.mapData[y][x];              // map配列よりブロック種類を取得
 
-                ////描画しようとしているidが-1の時は描画をスキップ
-                //if (imgIndex == -1)
-                //{
-                //    continue;
-                //}
-
                 int imgHandle = mapChipImg[imgIndex];  // indexをつかって画像ハンドル配列から画像ハンドルを取得
 
                 // マップチップ幅でブロック画像を敷き詰めて描画する
@@ -123,24 +117,24 @@ namespace dream
         for (int iy = 0; iy < dst.mapYNum; iy++)
         {
             //マップブロックのY座標
-            blockRect.worldLY = iy * static_cast<float>(100);
-            blockRect.worldRY = (iy + 1) * static_cast<float>(100);
+            blockRect.worldLY = iy * static_cast<float>(mapChipSize);
+            blockRect.worldRY = (iy + 1) * static_cast<float>(mapChipSize);
             for (int ix = 0; ix < dst.mapXNum; ix++)
             {
                 // 当たりブロックか 1→通れる 1以外→通れない 
                 if (dst.mapData[iy][ix] != 0)
                 {
                     // マップブロックのX座標
-                    blockRect.worldLX = ix * static_cast<float>(100);
-                    blockRect.worldRX = (ix + 1) * static_cast<float>(100);
+                    blockRect.worldLX = ix * static_cast<float>(mapChipSize);
+                    blockRect.worldRX = (ix + 1) * static_cast<float>(mapChipSize);
                     // 当たっているか？
-                    if (Collision::isHitRect(checkRect, blockRect))
+                    if (collision.isHitRect(checkRect, blockRect))
                     {
                         // 一度でもブロックと当たったらhitflgをtrueに
                         hitflg = true;
                         //第一引数：キャラクターなどの当たり判定で動かす方の矩形
                         //第二引数：マップなどの固定物の矩形を入れる
-                        Collision::clacFixHitReactPosition(checkRect, blockRect);
+                        collision.clacFixHitReactPosition(checkRect, blockRect);
                     }
                 }
             }
