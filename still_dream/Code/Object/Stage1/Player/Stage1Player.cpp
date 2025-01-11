@@ -6,13 +6,12 @@ namespace dream
         :GameObject(stage1ObjectTag.PLAYER)
     {
         mPos.x = 200;
-        mPos.y = 800;
+        mPos.y = 600;
         vx = 0.0f;
         vy = 0.0f;
         jumpFlag = false;
         prevJumpButton = false;
         isJumpPush = false;
-        jumpTimer = jumpButtonAcceptTime;
         onGround = false;
         hitHead = false;
 
@@ -32,6 +31,10 @@ namespace dream
     {
         Input(deltaTime);
         Draw();
+
+        Collision::updateWorldRect(playerHit, mPos.x, mPos.y);
+        Collision::updateWorldRect(playerFootCollider, mPos.x, mPos.y + playerHit.h);
+        Collision::updateWorldRect(playerHeadCollider, mPos.x, mPos.y);
     }
 
     void Stage1Player::Draw()
@@ -55,7 +58,6 @@ namespace dream
         {
             jumpFlag = false;
             vy = 0.0f;
-            jumpTimer = jumpButtonAcceptTime;
         }
         else
         {
@@ -82,23 +84,18 @@ namespace dream
         }
 
         //ジャンプ可能でジャンプキーが押された
-        if (isJumpPush && !jumpFlag && jumpTimer>0.0f)
+        if (isJumpPush && !jumpFlag)
         {
             vy -= jumpInitVelocity;
             jumpFlag = true;
             onGround = false;
         }
 
-        // ジャンプ長押し中で上昇タイマー期間なら上昇
-        if (prevJumpButton && jumpTimer > 0.0f)
-        {
-            vy -= jumpUpSpeed * deltaTime;
-        }
+        
 
         //ジャンプ中重力発生
         if (jumpFlag)
         {
-            jumpTimer -= deltaTime;
             vy += gravity * deltaTime;
         }
 
@@ -114,9 +111,7 @@ namespace dream
         //位置更新
         mPos.y += vy;
 
-        Collision::updateWorldRect(playerHit, mPos.x, mPos.y);
-        Collision::updateWorldRect(playerFootCollider, mPos.x , mPos.y + playerHit.h);
-        Collision::updateWorldRect(playerHeadCollider, mPos.x , mPos.y);
+        
     }
 
     void Stage1Player::playerfixColPosition(Collision::sHitRect& hitRect)
