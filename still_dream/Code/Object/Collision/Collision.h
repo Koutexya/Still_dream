@@ -9,6 +9,7 @@ namespace dream
     class Collision
     {
     public:
+        Collision();
         ~Collision();
 
         /// @brief  初期化
@@ -75,11 +76,7 @@ namespace dream
         /// <param name="staticRect">静止矩形(動かないブロックなど)</param>
         static void clacFixHitReactPosition(sHitRect& movableRect, const sHitRect& staticRect);
 
-
-    private:
-        Collision();
-
-        static std::unique_ptr<Collision> mInstance;
+        
     };
 
     

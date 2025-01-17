@@ -107,6 +107,9 @@ namespace dream
             playerfixColPosition(playerHit);
         }
 
+        // 足元チェック
+        //playerSetGroundFlg(Stage1Map::mapHitCalc(dat,playerFootCollider));
+
 
         //位置更新
         mPos.y += vy;

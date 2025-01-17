@@ -6,6 +6,7 @@ namespace dream
     Stage1Map::Stage1Map()
         :GameObject(stage1ObjectTag.MAP)
     {
+        scrollcnt = 0;
 
         LoadDivGraph("Asset/Image/map2.png", mapImgXNum * mapImgYNum, mapImgXNum, mapImgYNum, mapChipSize, mapChipSize,mapChipImg);
         
@@ -31,7 +32,8 @@ namespace dream
 
     void Stage1Map::Draw()
     {
-        mapLayerDraw(layerBrock, 0, 0);
+        scrollcnt += 1;
+        mapLayerDraw(layerBrock, scrollcnt, 0);
     }
 
     void Stage1Map::mapLayerDraw(MapLayer& layer, int scrollOffsetX, int scrollOffsetY)
@@ -117,22 +119,22 @@ namespace dream
         for (int iy = 0; iy < dst.mapYNum; iy++)
         {
             //マップブロックのY座標
-            blockRect.worldLY = iy * static_cast<float>(mapChipSize);
+            blockRect.worldLY = iy * static_cast<float>( mapChipSize);
             blockRect.worldRY = (iy + 1) * static_cast<float>(mapChipSize);
             for (int ix = 0; ix < dst.mapXNum; ix++)
             {
-                // 当たりブロックか 1→通れる 1以外→通れない 
+                // 当たりブロックか 0→通れる 0以外→通れない 
                 if (dst.mapData[iy][ix] != 0)
                 {
                     // マップブロックのX座標
-                    blockRect.worldLX = ix * static_cast<float>(mapChipSize);
+                    blockRect.worldLX = static_cast<float>(ix * mapChipSize);
                     blockRect.worldRX = (ix + 1) * static_cast<float>(mapChipSize);
                     // 当たっているか？
                     if (collision.isHitRect(checkRect, blockRect))
                     {
                         // 一度でもブロックと当たったらhitflgをtrueに
                         hitflg = true;
-                        //第一引数：キャラクターなどの当たり判定で動かす方の矩形
+                        //第一引数：キャラクターなどの当たり判定矩形
                         //第二引数：マップなどの固定物の矩形を入れる
                         collision.clacFixHitReactPosition(checkRect, blockRect);
                     }
