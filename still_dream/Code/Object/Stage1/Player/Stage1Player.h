@@ -61,7 +61,7 @@ namespace dream
         Collision::sHitRect playerHeadCollider;    //頭上コライダー
 
         const float gravity = 40.0f;    //重力
-        const float jumpInitVelocity = 11.5f;    //ジャンプ初速度
+        const float jumpInitVelocity = 60.0f;    //ジャンプ初速度
 
         int PlayerHandle;   //画像
         float vx, vy;   //速度

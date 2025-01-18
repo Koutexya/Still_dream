@@ -36,7 +36,7 @@ namespace dream
 
         /// <summary>
         /// ƒuƒƒbƒN•Çî•ñŒ^
-    /// </summary>
+        /// </summary>
         typedef unsigned char BlockInfo;
 
         ///<summary>
