@@ -38,6 +38,7 @@ namespace dream
 
     void Stage1Map::mapLayerDraw(MapLayer& layer, int scrollOffsetX, int scrollOffsetY)
     {
+
         for (int y = 0; y < layer.mapYNum; y++)
         {
             for (int x = 0; x < layer.mapXNum; x++)
@@ -115,12 +116,16 @@ namespace dream
         bool hitflg = false;
         Collision::sHitRect blockRect;
 
+        blockRect.w = mapChipSize;
+        blockRect.h = mapChipSize;
+
         // すべてのマップブロック vs 調査ブロックの衝突を調べる
         for (int iy = 0; iy < dst.mapYNum; iy++)
         {
             //マップブロックのY座標
-            blockRect.worldLY = iy * static_cast<float>( mapChipSize);
-            blockRect.worldRY = (iy + 1) * static_cast<float>(mapChipSize);
+            blockRect.worldLY = static_cast<float>(iy * mapChipSize);
+            blockRect.worldRY = static_cast<float>((iy + 1) * mapChipSize);
+
             for (int ix = 0; ix < dst.mapXNum; ix++)
             {
                 // 当たりブロックか 0→通れる 0以外→通れない 
@@ -134,6 +139,8 @@ namespace dream
                     {
                         // 一度でもブロックと当たったらhitflgをtrueに
                         hitflg = true;
+                        // ブロック情報（上下左右壁の有無を調べる）
+                        collision.BlockInfo bi = collision.mapGetBlockInfo(ix, iy);
                         //第一引数：キャラクターなどの当たり判定矩形
                         //第二引数：マップなどの固定物の矩形を入れる
                         collision.clacFixHitReactPosition(checkRect, blockRect);

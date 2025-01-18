@@ -6,7 +6,7 @@ namespace dream
         :GameObject(stage1ObjectTag.PLAYER)
     {
         mPos.x = 200;
-        mPos.y = 600;
+        mPos.y = 300;
         vx = 0.0f;
         vy = 0.0f;
         jumpFlag = false;
@@ -32,6 +32,27 @@ namespace dream
         Input(deltaTime);
         Draw();
 
+        if (onGround)   //接地してるとき
+        {
+            jumpFlag = false;
+            vy = 0.0f;
+        }
+        else
+        {
+            jumpFlag = true;
+        }
+
+        //player当たり判定チェック
+        Stage1Map::MapLayer dat = stage1.getMapHitRect();
+        if (Stage1Map::mapHitCalc(dat, playerHit))
+        {
+            playerfixColPosition(playerHit);
+        }
+
+        // 足元チェック
+        playerSetGroundFlg(Stage1Map::mapHitCalc(dat, playerFootCollider));
+
+        // 当たり判定位置更新
         Collision::updateWorldRect(playerHit, mPos.x, mPos.y);
         Collision::updateWorldRect(playerFootCollider, mPos.x, mPos.y + playerHit.h);
         Collision::updateWorldRect(playerHeadCollider, mPos.x, mPos.y);
@@ -48,23 +69,6 @@ namespace dream
 
     void Stage1Player::Input(float deltaTime)
     {
-        //当たり判定作ったら書き換え　この条件の時ジャンプ可能
-        if (mPos.y == 800)
-        {
-            onGround = true;
-        }
-
-        if (onGround)   //接地してるとき
-        {
-            jumpFlag = false;
-            vy = 0.0f;
-        }
-        else
-        {
-            jumpFlag = true;
-        }
-
-
         //ジャンプボタン押した瞬間か
         if (CheckHitKey(KEY_INPUT_SPACE))
         {
@@ -100,15 +104,7 @@ namespace dream
         }
 
         
-        //if(Stage1Map::mapHitCalc(playerHit))
-        Stage1Map::MapLayer dat = stage1.getMapHitRect();
-        if (Stage1Map::mapHitCalc(dat, playerHit))
-        {
-            playerfixColPosition(playerHit);
-        }
-
-        // 足元チェック
-        //playerSetGroundFlg(Stage1Map::mapHitCalc(dat,playerFootCollider));
+        
 
 
         //位置更新

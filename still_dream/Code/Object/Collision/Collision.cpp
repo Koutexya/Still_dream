@@ -63,15 +63,15 @@ namespace dream
         float right = staticRect.worldRX - movableRect.worldLX;
         float up = staticRect.worldLY - movableRect.worldRY;
         float down = staticRect.worldRY - movableRect.worldLY;
-        float dx;   //‰Ÿ‚µ–ß‚³‚ê‚½‰¡
-        float dy;   //‰Ÿ‚µ–ß‚³‚ê‚½c
         
 
         //fabs() ƒJƒbƒR“à‚É•Ï”‚ªâ‘Î’l‚ğ‹‚ß‚éŠÖ”
         //dx‚Íx•ûŒü‚ÌÅ’Z‰Ÿ‚µ–ß‚µˆÚ“®—Ê
         //dy‚Íy•ûŒü‚ÌÅ’Z‰Ÿ‚µ–ß‚µˆÚ“®—Ê
-        dx = (fabs(left) < fabs(right)) ? left : right;
-        dy = (fabs(up) < fabs(down)) ? up : down;
+        float dx = (fabs(left) < fabs(right)) ? left : right;
+        float dy = (fabs(up) < fabs(down)) ? up : down;
+
+
 
         //x•ûŒü‚Æy•ûŒü‚ÌÅ’Z‰Ÿ‚µ–ß‚µ‹——£‚ğ”äŠr‚µAÅ’Z‚Å–ß‚¹‚é•û‚Å–ß‚·
         if (fabs(dx) < fabs(dy))
