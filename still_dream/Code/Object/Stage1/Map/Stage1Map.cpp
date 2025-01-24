@@ -45,7 +45,6 @@ namespace dream
             for (int x = 0; x < layer.mapXNum; x++)
             {
                 int imgIndex = layer.mapData[y][x];              // map配列よりブロック種類を取得
-
                 int imgHandle = mapChipImg[imgIndex];  // indexをつかって画像ハンドル配列から画像ハンドルを取得
 
                 // マップチップ幅でブロック画像を敷き詰めて描画する
@@ -93,6 +92,9 @@ namespace dream
                 iss >> dst.mapData[iy][ix];
             }
         }
+
+        //ファイルを閉じる
+        ifs.close();
         
         return true;
 	}
