@@ -14,10 +14,11 @@ namespace dream
         isJumpPush = false;
         onGround = false;
         hitHead = false;
+        firstmPos = false;
 
         Collision::initRect(playerHit, 100, 100);
-        Collision::initRect(playerFootCollider, 90, 1);
-        Collision::initRect(playerHeadCollider, 90, 1);
+        Collision::initRect(playerFootCollider, 100, 1);
+        Collision::initRect(playerHeadCollider, 100, 1);
 
         PlayerHandle = LoadGraph("Asset/Image/Character.png");
     }
@@ -56,6 +57,8 @@ namespace dream
         Collision::updateWorldRect(playerHit, mPos.x, mPos.y);
         Collision::updateWorldRect(playerFootCollider, mPos.x, mPos.y + playerHit.h);
         Collision::updateWorldRect(playerHeadCollider, mPos.x, mPos.y);
+
+        
     }
 
     void Stage1Player::Draw()
@@ -69,6 +72,17 @@ namespace dream
 
     void Stage1Player::Input(float deltaTime)
     {
+        if (CheckHitKey(KEY_INPUT_RIGHT))
+        {
+            vx += +2.5f * deltaTime;
+
+            // 速度クリップ
+            if (vx > 10.0f)
+            {
+                vx = +10.0f;
+            }
+        }
+
         //ジャンプボタン押した瞬間か
         if (CheckHitKey(KEY_INPUT_SPACE))
         {
@@ -108,6 +122,7 @@ namespace dream
 
 
         //位置更新
+        mPos.x += vx;
         mPos.y += vy;
 
         
@@ -126,8 +141,16 @@ namespace dream
             vy = 0.0f;
         }
 
-        mPos.x = hitRect.worldLX;
-        mPos.y = hitRect.worldLY;
+        if (firstmPos != true)
+        {
+            mPos.y = hitRect.worldLY;
+        }
+        else
+        {
+            mPos.x = hitRect.worldLX;
+            mPos.y = hitRect.worldLY;
+        }
+        firstmPos = false;
 
         playerHit = hitRect;
     }

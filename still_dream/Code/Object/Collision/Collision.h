@@ -28,16 +28,6 @@ namespace dream
             float worldRY;   //右上Y座標
         };
 
-        // ブロック壁情報
-        #define BLOCK_LEFT  0x01    // 0001
-        #define BLOCK_RIGHT 0x02    // 0010
-        #define BLOCK_UP    0x04    // 0100
-        #define BLOCK_DOWN  0x08    // 1000
-
-        /// <summary>
-        /// ブロック壁情報型
-        /// </summary>
-        typedef unsigned char BlockInfo;
 
         ///<summary>
         //当たり初期化
