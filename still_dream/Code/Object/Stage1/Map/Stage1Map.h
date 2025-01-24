@@ -61,6 +61,7 @@ namespace dream
 
         MapLayer getMapHitRect() { return layerBrock; };
 
+
         
     private:
         static Collision collision;

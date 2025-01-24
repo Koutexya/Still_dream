@@ -8,6 +8,7 @@ namespace dream
     {
         scrollcnt = 0;
 
+        //マップ画像読み込み
         LoadDivGraph("Asset/Image/map2.png", mapImgXNum * mapImgYNum, mapImgXNum, mapImgYNum, mapChipSize, mapChipSize,mapChipImg);
         
         //マップ読み込み
@@ -32,7 +33,7 @@ namespace dream
 
     void Stage1Map::Draw()
     {
-        scrollcnt += 1;
+        scrollcnt += 0;
         mapLayerDraw(layerBrock, scrollcnt, 0);
     }
 
@@ -139,8 +140,6 @@ namespace dream
                     {
                         // 一度でもブロックと当たったらhitflgをtrueに
                         hitflg = true;
-                        // ブロック情報（上下左右壁の有無を調べる）
-                        collision.BlockInfo bi = collision.mapGetBlockInfo(ix, iy);
                         //第一引数：キャラクターなどの当たり判定矩形
                         //第二引数：マップなどの固定物の矩形を入れる
                         collision.clacFixHitReactPosition(checkRect, blockRect);
@@ -150,7 +149,5 @@ namespace dream
         }
         return hitflg;
     }
-
-    
 
 }
