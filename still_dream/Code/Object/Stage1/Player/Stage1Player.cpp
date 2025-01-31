@@ -15,6 +15,7 @@ namespace dream
         onGround = false;
         hitHead = false;
         firstmPos = false;
+        scrollCnt = 0;
 
         Collision::initRect(playerHit, 100, 100);
         Collision::initRect(playerFootCollider, 100, 1);
@@ -30,9 +31,8 @@ namespace dream
 
     void Stage1Player::Update(float deltaTime)
     {
-        
+        scrollCnt++;
         Input(deltaTime);
-        Draw();
 
         if (onGround)   //接地してるとき
         {
@@ -46,26 +46,23 @@ namespace dream
 
         //player当たり判定チェック
         Stage1Map::MapLayer dat = stage1.getMapHitRect();
-        if (Stage1Map::mapHitCalc(dat, playerHit))
+        if (Stage1Map::mapHitCalc(dat, playerHit, scrollCnt))
         {
             playerfixColPosition(playerHit);
         }
 
         // 足元チェック
-        playerSetGroundFlg(Stage1Map::mapHitCalc(dat, playerFootCollider));
+        playerSetGroundFlg(Stage1Map::mapHitCalc(dat, playerFootCollider, scrollCnt));
 
         // 当たり判定位置更新
         Collision::updateWorldRect(playerHit, mPos.x, mPos.y);
         Collision::updateWorldRect(playerFootCollider, mPos.x, mPos.y + playerHit.h);
         Collision::updateWorldRect(playerHeadCollider, mPos.x, mPos.y);
 
-        scrollmanager.ScrollUpdate(playerHit, deltaTime);
     }
 
     void Stage1Player::Draw()
     {
-        scrOffsX = scrollmanager.ScrollGetDrawOffsetX();
-        scrOffsY = scrollmanager.ScrollGetDrawOffsetY();
         DrawGraph(mPos.x, mPos.y, PlayerHandle, TRUE);
 
         Collision::drawRect(playerHit);
@@ -75,16 +72,17 @@ namespace dream
 
     void Stage1Player::Input(float deltaTime)
     {
-        if (CheckHitKey(KEY_INPUT_RIGHT))
+        if (!jumpFlag)
         {
-            vx += +2.5f * deltaTime;
-
-            // 速度クリップ
-            if (vx > 10.0f)
-            {
-                vx = +10.0f;
-            }
+            // 地上加速度
+            vx += +0.2f * deltaTime;
         }
+        else
+        {
+            // 空中加速度
+            vx += +0.2f * 0.8f * deltaTime;
+        }
+
 
         //ジャンプボタン押した瞬間か
         if (CheckHitKey(KEY_INPUT_SPACE))

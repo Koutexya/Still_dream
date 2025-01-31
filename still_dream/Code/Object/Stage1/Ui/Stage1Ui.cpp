@@ -16,7 +16,6 @@ namespace dream
     void Stage1Ui::Update(float deltaTime)
     {
         Draw();
-        scrollmanager.ScrollDebugShow();
     }
 
     void Stage1Ui::Draw()
