@@ -4,6 +4,7 @@
 #include"../../GameObject/GameObject.h"
 #include"../../Collision/Collision.h"
 #include"../Map/Stage1Map.h"
+#include"../../ScrollManager/ScrollManager.h"
 
 namespace dream
 {
@@ -54,6 +55,7 @@ namespace dream
 
     private:
         Stage1Map stage1;
+        ScrollManager scrollmanager;
 
         POINT mPos;
         Collision::sHitRect playerHit; //プレイヤー当たり判定
@@ -71,5 +73,6 @@ namespace dream
         bool onGround;  //接地しているか
         bool hitHead;   //頭がぶつかったか
         bool firstmPos;
+        int scrOffsX, scrOffsY;
     };
 }

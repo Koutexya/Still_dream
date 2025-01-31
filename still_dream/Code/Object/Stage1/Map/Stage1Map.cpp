@@ -13,6 +13,15 @@ namespace dream
         
         //マップ読み込み
         mapLayerLoader(layerBrock, "Asset/Csv/map1.csv");
+
+        MapLayer layer;
+        Collision::sHitRect stageRect;
+        stageRect.worldLX = 0;
+        stageRect.worldLY = 0;
+        stageRect.worldRX = mapChipSize * layer.mapXNum;  // ブロックを50個横方向
+        stageRect.worldRY = mapChipSize * layer.mapYNum;   // ブロックを10個縦方向
+        // スクロールマネージャの初期化
+        scrollmanager.ScrollManagerInit(1920, 1080, stageRect);
     }
 
     Stage1Map::~Stage1Map()
@@ -33,8 +42,9 @@ namespace dream
 
     void Stage1Map::Draw()
     {
-        scrollcnt += 0;
-        mapLayerDraw(layerBrock, scrollcnt, 0);
+        scrOffsX = scrollmanager.ScrollGetDrawOffsetX();
+        scrOffsY = scrollmanager.ScrollGetDrawOffsetY();
+        mapLayerDraw(layerBrock, 0, 0);
     }
 
     void Stage1Map::mapLayerDraw(MapLayer& layer, int scrollOffsetX, int scrollOffsetY)

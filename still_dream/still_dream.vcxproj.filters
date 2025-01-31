@@ -91,6 +91,9 @@
     <Filter Include="ソース ファイル\Object\Stage\Ui">
       <UniqueIdentifier>{8d7459d5-f073-457c-b6d8-bc7a2e26b5a0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Object\ScrollManager">
+      <UniqueIdentifier>{9857de8f-a8ca-4f55-9a18-4f6b9af6aa69}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\main.cpp">
@@ -155,6 +158,9 @@
     </ClCompile>
     <ClCompile Include="Code\Object\Collision\Collision.cpp">
       <Filter>ソース ファイル\Object\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Object\ScrollManager\ScrollManager.cpp">
+      <Filter>ソース ファイル\Object\ScrollManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -226,6 +232,9 @@
     </ClInclude>
     <ClInclude Include="Code\Object\Collision\Collision.h">
       <Filter>ソース ファイル\Object\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Object\ScrollManager\ScrollManager.h">
+      <Filter>ソース ファイル\Object\ScrollManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

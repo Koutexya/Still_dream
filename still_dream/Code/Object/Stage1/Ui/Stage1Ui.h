@@ -1,5 +1,6 @@
 #pragma once
 #include"../../GameObject/GameObject.h"
+#include"../../ScrollManager/ScrollManager.h"
 
 namespace dream
 {
@@ -20,5 +21,6 @@ namespace dream
         void Draw()override;
 
     private:
+        ScrollManager scrollmanager;
     };
 }
