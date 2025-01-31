@@ -30,6 +30,7 @@ namespace dream
 
     void Stage1Player::Update(float deltaTime)
     {
+        
         Input(deltaTime);
         Draw();
 
@@ -58,11 +59,13 @@ namespace dream
         Collision::updateWorldRect(playerFootCollider, mPos.x, mPos.y + playerHit.h);
         Collision::updateWorldRect(playerHeadCollider, mPos.x, mPos.y);
 
-        
+        scrollmanager.ScrollUpdate(playerHit, deltaTime);
     }
 
     void Stage1Player::Draw()
     {
+        scrOffsX = scrollmanager.ScrollGetDrawOffsetX();
+        scrOffsY = scrollmanager.ScrollGetDrawOffsetY();
         DrawGraph(mPos.x, mPos.y, PlayerHandle, TRUE);
 
         Collision::drawRect(playerHit);

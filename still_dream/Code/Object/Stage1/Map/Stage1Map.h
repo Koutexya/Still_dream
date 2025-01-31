@@ -1,6 +1,7 @@
 #pragma once
 #include"../../GameObject/GameObject.h"
 #include"../../Collision/Collision.h"
+#include"../../ScrollManager/ScrollManager.h"
 
 #include<DxLib.h>
 #include<fstream>
@@ -65,7 +66,7 @@ namespace dream
         
     private:
         static Collision collision;
-
+        ScrollManager scrollmanager;
         
 
         static const int mapChipSize = 100;
@@ -73,6 +74,7 @@ namespace dream
         static const int mapImgYNum = 1;
 
         int scrollcnt = 0;
+        int scrOffsX, scrOffsY;
 
         MapLayer layerBrock;
 
