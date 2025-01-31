@@ -16,10 +16,13 @@ namespace dream
         hitHead = false;
         firstmPos = false;
         scrollCnt = 0;
+        GameOverFlag = false;
 
         Collision::initRect(playerHit, 100, 100);
         Collision::initRect(playerFootCollider, 100, 1);
-        Collision::initRect(playerHeadCollider, 100, 1);
+        Collision::initRect(playerHeadCollider, 100, -1);
+        Collision::initRect(playerRightCollider, 1, 100);
+
 
         PlayerHandle = LoadGraph("Asset/Image/Character.png");
     }
@@ -31,7 +34,7 @@ namespace dream
 
     void Stage1Player::Update(float deltaTime)
     {
-        scrollCnt++;
+        scrollCnt+=2;
         Input(deltaTime);
 
         if (onGround)   //接地してるとき
@@ -54,11 +57,17 @@ namespace dream
         // 足元チェック
         playerSetGroundFlg(Stage1Map::mapHitCalc(dat, playerFootCollider, scrollCnt));
 
+        //右側チェック
+        if (Stage1Map::mapHitCalc(dat, playerRightCollider, scrollCnt)==true)
+        {
+            GameOverFlag = true;
+        }
+
         // 当たり判定位置更新
         Collision::updateWorldRect(playerHit, mPos.x, mPos.y);
         Collision::updateWorldRect(playerFootCollider, mPos.x, mPos.y + playerHit.h);
         Collision::updateWorldRect(playerHeadCollider, mPos.x, mPos.y);
-
+        Collision::updateWorldRect(playerRightCollider, mPos.x + playerHit.w, mPos.y);
     }
 
     void Stage1Player::Draw()
@@ -68,21 +77,11 @@ namespace dream
         Collision::drawRect(playerHit);
         Collision::drawRect(playerFootCollider);
         Collision::drawRect(playerHeadCollider);
+        Collision::drawRect(playerRightCollider);
     }
 
     void Stage1Player::Input(float deltaTime)
     {
-        if (!jumpFlag)
-        {
-            // 地上加速度
-            vx += +0.2f * deltaTime;
-        }
-        else
-        {
-            // 空中加速度
-            vx += +0.2f * 0.8f * deltaTime;
-        }
-
 
         //ジャンプボタン押した瞬間か
         if (CheckHitKey(KEY_INPUT_SPACE))
