@@ -1,7 +1,6 @@
 #pragma once
 #include"../../GameObject/GameObject.h"
 #include"../../Collision/Collision.h"
-#include"../../ScrollManager/ScrollManager.h"
 
 #include<DxLib.h>
 #include<fstream>
@@ -57,7 +56,7 @@ namespace dream
         /// </summary>
         /// <param name ="checkRect">マップと当たっているか調査したい矩形</param>
         /// <returns>マップと衝突したかをtrue/falseで返す</returns>
-        static bool mapHitCalc(MapLayer& dst, Collision::sHitRect& checkRect);
+        static bool mapHitCalc(MapLayer& dst, Collision::sHitRect& checkRect, int scrollCnt);
 
 
         MapLayer getMapHitRect() { return layerBrock; };
@@ -66,15 +65,15 @@ namespace dream
         
     private:
         static Collision collision;
-        ScrollManager scrollmanager;
-        
 
         static const int mapChipSize = 100;
         static const int mapImgXNum = 2;
         static const int mapImgYNum = 1;
 
-        int scrollcnt = 0;
+        int scrollcnt;
         int scrOffsX, scrOffsY;
+
+        float a;
 
         MapLayer layerBrock;
 
