@@ -69,11 +69,9 @@ namespace dream
         static const int mapChipSize = 100;
         static const int mapImgXNum = 2;
         static const int mapImgYNum = 1;
+        float clearFlag;
 
         int scrollcnt;
-        int scrOffsX, scrOffsY;
-
-        float a;
 
         MapLayer layerBrock;
 

@@ -20,8 +20,8 @@ namespace dream
         dstRect.h = h;
 
         dstRect.worldLX = 0.0f;
-        dstRect.worldRX = w;
         dstRect.worldLY = 0.0f;
+        dstRect.worldRX = w;
         dstRect.worldRY = h;
     }
 
@@ -29,8 +29,8 @@ namespace dream
     void Collision::updateWorldRect(sHitRect& dstRect, float x, float y)
     {
         dstRect.worldLX = x;
-        dstRect.worldRX = x + dstRect.w;
         dstRect.worldLY = y;
+        dstRect.worldRX = x + dstRect.w;
         dstRect.worldRY = y + dstRect.h;
     }
 

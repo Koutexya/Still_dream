@@ -7,6 +7,7 @@ namespace dream
         :GameObject(stage1ObjectTag.MAP)
     {
         scrollcnt = 0;
+        clearFlag = false;
 
         //ƒ}ƒbƒv‰æ‘œ“Ç‚Ýž‚Ý
         LoadDivGraph("Asset/Image/map2.png", mapImgXNum * mapImgYNum, mapImgXNum, mapImgYNum, mapChipSize, mapChipSize,mapChipImg);
@@ -29,7 +30,15 @@ namespace dream
 
     void Stage1Map::Update(float deltaTime)
     {
-        scrollcnt += 1;
+        if ((mapChipSize * layerBrock.mapXNum - 1980) > scrollcnt)
+        {
+            scrollcnt += 2;
+        }
+        else
+        {
+            clearFlag = true;
+        }
+        
     }
 
     void Stage1Map::Draw()

@@ -59,6 +59,7 @@ namespace dream
         Collision::sHitRect playerHit; //プレイヤー当たり判定
         Collision::sHitRect playerFootCollider;    //接地コライダー
         Collision::sHitRect playerHeadCollider;    //頭上コライダー
+        Collision::sHitRect playerRightCollider;   //右側コライダー
 
         const float gravity = 40.0f;    //重力
         const float jumpInitVelocity = 80.0f;    //ジャンプ初速度
@@ -72,5 +73,6 @@ namespace dream
         bool hitHead;   //頭がぶつかったか
         bool firstmPos;
         int scrollCnt;
+        bool GameOverFlag;
     };
 }
