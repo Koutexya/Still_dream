@@ -1,4 +1,6 @@
 #pragma once
+#include<iostream>
+#include<future>
 #include<fstream>
 #include"../../IncludeFile/json.hpp"
 

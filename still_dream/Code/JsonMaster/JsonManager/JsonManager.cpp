@@ -5,6 +5,7 @@ namespace dream
     std::unique_ptr<JsonManager>JsonManager::jsonmanager = nullptr;
 
     JsonManager::JsonManager()
+        :masterstagedata(new MasterStageData)
     {
         //‚È‚µ
     }
@@ -12,6 +13,7 @@ namespace dream
     JsonManager::~JsonManager()
     {
         //‰ð•ú
+        masterstagedata.release();
     }
 
     void JsonManager::InitJsonManager()

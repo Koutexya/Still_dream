@@ -145,6 +145,8 @@
     <ClCompile Include="Code\GameSystem\Window\Window.cpp" />
     <ClCompile Include="Code\JsonMaster\IOUtility\IOUtility.cpp" />
     <ClCompile Include="Code\JsonMaster\JsonManager\JsonManager.cpp" />
+    <ClCompile Include="Code\JsonMaster\Stage\MasterStageData\MasterStageData.cpp" />
+    <ClCompile Include="Code\JsonMaster\Stage\StageData\StageData.cpp" />
     <ClCompile Include="Code\main.cpp" />
     <ClCompile Include="Code\Object\Collision\Collision.cpp" />
     <ClCompile Include="Code\Object\GameObjectManager\GameObjectManager.cpp" />
@@ -168,6 +170,8 @@
     <ClInclude Include="Code\GameSystem\Window\Window.h" />
     <ClInclude Include="Code\JsonMaster\IOUtility\IOUtility.h" />
     <ClInclude Include="Code\JsonMaster\JsonManager\JsonManager.h" />
+    <ClInclude Include="Code\JsonMaster\Stage\MasterStageData\MasterStageData.h" />
+    <ClInclude Include="Code\JsonMaster\Stage\StageData\StageData.h" />
     <ClInclude Include="Code\Object\Collision\Collision.h" />
     <ClInclude Include="Code\Object\GameObjectManager\GameObjectManager.h" />
     <ClInclude Include="Code\Object\GameObject\GameObject.h" />
@@ -185,6 +189,9 @@
     <ClInclude Include="Code\Scene\SceneManager\SceneManager.h" />
     <ClInclude Include="Code\Scene\Stage1\Stage1.h" />
     <ClInclude Include="Code\Scene\Title\Title.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Code\JsonFile\StageData.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

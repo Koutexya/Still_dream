@@ -1,6 +1,7 @@
 #pragma once
 #include"../../GameObject/GameObject.h"
 #include"../../Collision/Collision.h"
+#include"../../../JsonMaster/JsonManager/JsonManager.h"
 
 #include<DxLib.h>
 #include<fstream>
