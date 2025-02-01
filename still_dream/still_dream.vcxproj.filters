@@ -91,6 +91,18 @@
     <Filter Include="ソース ファイル\Object\Stage\Ui">
       <UniqueIdentifier>{8d7459d5-f073-457c-b6d8-bc7a2e26b5a0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\JsonFile">
+      <UniqueIdentifier>{ba164f93-cdc1-43a7-87bb-8292c8fdcef6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\JsonMaster\Stage">
+      <UniqueIdentifier>{a164a252-6dfc-4ccf-9afb-41263eca5229}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\JsonMaster\Stage\StageData">
+      <UniqueIdentifier>{ecc57eee-aab8-49b1-b900-4bd1c0dffd93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\JsonMaster\Stage\MasterStageData">
+      <UniqueIdentifier>{40c6eaef-590b-4d24-9919-40d4dc4e6c85}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\main.cpp">
@@ -155,6 +167,12 @@
     </ClCompile>
     <ClCompile Include="Code\Object\Collision\Collision.cpp">
       <Filter>ソース ファイル\Object\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\JsonMaster\Stage\StageData\StageData.cpp">
+      <Filter>ソース ファイル\JsonMaster\Stage\StageData</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\JsonMaster\Stage\MasterStageData\MasterStageData.cpp">
+      <Filter>ソース ファイル\JsonMaster\Stage\MasterStageData</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -227,5 +245,16 @@
     <ClInclude Include="Code\Object\Collision\Collision.h">
       <Filter>ソース ファイル\Object\Collision</Filter>
     </ClInclude>
+    <ClInclude Include="Code\JsonMaster\Stage\StageData\StageData.h">
+      <Filter>ソース ファイル\JsonMaster\Stage\StageData</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\JsonMaster\Stage\MasterStageData\MasterStageData.h">
+      <Filter>ソース ファイル\JsonMaster\Stage\MasterStageData</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Code\JsonFile\StageData.json">
+      <Filter>ソース ファイル\JsonFile</Filter>
+    </None>
   </ItemGroup>
 </Project>
