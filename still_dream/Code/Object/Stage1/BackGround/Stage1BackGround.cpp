@@ -18,7 +18,7 @@ namespace dream
 
     void Stage1BackGround::Update(float deltaTime)
     {
-        Draw();
+
     }
 
     void Stage1BackGround::Draw()

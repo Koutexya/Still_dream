@@ -48,6 +48,7 @@ namespace dream
                 mInstance->mObjects[tag].clear();
             }
         }
+        //mInstance->mObjects.clear();
     }
 
     void GameObjectManager::Update(float deltaTime)

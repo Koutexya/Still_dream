@@ -10,11 +10,10 @@ namespace dream
         clearFlag = false;
 
         //マップ画像読み込み
-        //LoadDivGraph("Asset/Image/map.png", mapImgXNum * mapImgYNum, mapImgXNum, mapImgYNum, mapChipSize, mapChipSize,mapChipImg);
         LoadDivGraph(JsonManager::StageDataInstance()->StageDataInstance()->GetMapImg().c_str(), mapImgXNum * mapImgYNum, mapImgXNum, mapImgYNum, mapChipSize, mapChipSize, mapChipImg);
 
         //マップ読み込み
-        mapLayerLoader(layerBrock, "Asset/Csv/map.csv");
+        mapLayerLoader(layerBrock, JsonManager::StageDataInstance()->StageDataInstance()->GetMap1Csv().c_str());
 
     }
 

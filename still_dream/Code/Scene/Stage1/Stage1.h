@@ -1,11 +1,13 @@
 #pragma once
 #include"../SceneBase/SceneBase.h"
 #include"../../Object/GameObjectManager/GameObjectManager.h"
+#include"../../Object/GameObject/GameObject.h"
 #include"../../Object/GameObject/Stage1ObjectTag.h"
 #include"../../Object/Stage1/BackGround/Stage1BackGround.h"
 #include"../../Object/Stage1/Map/Stage1Map.h"
 #include"../../Object/Stage1/Player/Stage1Player.h"
 #include"../../Object/Stage1/Ui/Stage1Ui.h"
+#include"../../Object/StageSelect/StageSelect.h"
 
 namespace dream
 {

@@ -22,8 +22,12 @@ namespace dream
         /// @brief  選択したステージをゲット
         static std::string GetSelect() { return mInstance->SelectNum; }
 
+        static void SetGameFlag(std::string gameflag) { mInstance->GameFlag = gameflag; }
+        static std::string GetGameFlag() { return mInstance->GameFlag; }
+
     private:
         std::string SelectNum;
+        std::string GameFlag;
 
         /// @brief  コンストラクタ
         StageSelect();

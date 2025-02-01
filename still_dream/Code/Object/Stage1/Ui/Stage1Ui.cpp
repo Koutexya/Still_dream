@@ -15,7 +15,7 @@ namespace dream
 
     void Stage1Ui::Update(float deltaTime)
     {
-        Draw();
+
     }
 
     void Stage1Ui::Draw()

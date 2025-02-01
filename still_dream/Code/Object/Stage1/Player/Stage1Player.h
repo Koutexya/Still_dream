@@ -4,6 +4,8 @@
 #include"../../GameObject/GameObject.h"
 #include"../../Collision/Collision.h"
 #include"../Map/Stage1Map.h"
+#include"../../../JsonMaster/JsonManager/JsonManager.h"
+#include"../../StageSelect/StageSelect.h"
 
 namespace dream
 {
@@ -44,6 +46,7 @@ namespace dream
         ///@param   頭の当たり判定結果
         void playerSetHeadHitFlg(bool headHitFlg);
 
+
         ///@brief   プレイヤーの足元コライダーのゲット
         ///@return  足元コライダーの矩形情報
         Collision::sHitRect playerGetGroundCollider();
@@ -73,6 +76,7 @@ namespace dream
         bool hitHead;   //頭がぶつかったか
         bool firstmPos;
         int scrollCnt;
-        bool GameOverFlag;
+        
+        
     };
 }
