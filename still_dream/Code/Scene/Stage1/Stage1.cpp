@@ -31,7 +31,15 @@ namespace dream
         if (stageTag.GameOver == StageSelect::GetGameFlag())
         {
             GameObjectManager::ReleaseAllObj();
+            StageSelect::finalize();
             return new Stage1;
+        }
+        ////クリアした場合
+        if (stageTag.GameClear == StageSelect::GetGameFlag())
+        {
+            GameObjectManager::ReleaseAllObj();
+            StageSelect::finalize();
+            return new Title;
         }
         ////タイトルに戻るボタン押した場合
         if (CheckHitKey(KEY_INPUT_TAB))

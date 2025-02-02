@@ -24,6 +24,8 @@ namespace dream
 
         static void SetGameFlag(std::string gameflag) { mInstance->GameFlag = gameflag; }
         static std::string GetGameFlag() { return mInstance->GameFlag; }
+        
+        static void finalize();
 
     private:
         std::string SelectNum;

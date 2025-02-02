@@ -7,7 +7,6 @@ namespace dream
         :GameObject(stage1ObjectTag.MAP)
     {
         scrollcnt = 0;
-        clearFlag = false;
 
         //ƒ}ƒbƒv‰æ‘œ“Ç‚Ýž‚Ý
         LoadDivGraph(JsonManager::StageDataInstance()->StageDataInstance()->GetMapImg().c_str(), mapImgXNum * mapImgYNum, mapImgXNum, mapImgYNum, mapChipSize, mapChipSize, mapChipImg);
@@ -36,7 +35,8 @@ namespace dream
         }
         else
         {
-            clearFlag = true;
+            WaitTimer(1000);
+            StageSelect::SetGameFlag(stageTag.GameClear);
         }
         
     }
