@@ -1,5 +1,6 @@
 #pragma once
 #include"../../GameObject/GameObject.h"
+#include"../../StageSelect/StageSelect.h"
 
 namespace dream
 {

@@ -3,6 +3,8 @@
 #include"Stage1.h"
 #include"../Title/Title.h"
 
+
+
 namespace dream
 {
     Stage1::Stage1()
