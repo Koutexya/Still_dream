@@ -7,12 +7,14 @@ namespace dream
         :GameObject(stage1ObjectTag.MAP)
     {
         scrollcnt = 0;
+        //
+        auto stageData = JsonManager::StageDataInstance()->StageDataInstance();
 
         //マップ画像読み込み
-        LoadDivGraph(JsonManager::StageDataInstance()->StageDataInstance()->GetMapImg().c_str(), mapImgXNum * mapImgYNum, mapImgXNum, mapImgYNum, mapChipSize, mapChipSize, mapChipImg);
+        LoadDivGraph(stageData->GetMapImg().c_str(), mapImgXNum * mapImgYNum, mapImgXNum, mapImgYNum, mapChipSize, mapChipSize, mapChipImg);
 
         //マップ読み込み
-        mapLayerLoader(layerBrock, JsonManager::StageDataInstance()->StageDataInstance()->GetMap1Csv().c_str());
+        mapLayerLoader(layerBrock, stageData->GetMap1Csv().c_str());
 
     }
 
@@ -35,7 +37,6 @@ namespace dream
         }
         else
         {
-            WaitTimer(1000);
             StageSelect::SetGameFlag(stageTag.GameClear);
         }
         

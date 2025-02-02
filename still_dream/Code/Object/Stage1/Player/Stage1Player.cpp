@@ -6,7 +6,7 @@ namespace dream
         :GameObject(stage1ObjectTag.PLAYER)
     {
         mPos.x = 200;
-        mPos.y = 400;
+        mPos.y = 600;
         vx = 0.0f;
         vy = 0.0f;
         jumpFlag = false;
@@ -118,7 +118,12 @@ namespace dream
         }
 
         //èÌÇ…èdóÕ
+        /*if (jumpFlag)
+        {
+            vy += gravity * deltaTime;
+        }*/
         vy += gravity * deltaTime;
+        
 
 
 
