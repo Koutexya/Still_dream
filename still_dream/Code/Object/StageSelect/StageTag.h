@@ -10,5 +10,8 @@ namespace dream
         std::string Stage1 = "stage1";
         std::string Stage2 = "stage2";
 
+        std::string GameClear = "gameclear";
+        std::string GameOver = "gameover";
+
     }stageTag;
 }

@@ -6,7 +6,7 @@ namespace dream
         :GameObject(stage1ObjectTag.PLAYER)
     {
         mPos.x = 200;
-        mPos.y = 300;
+        mPos.y = 400;
         vx = 0.0f;
         vy = 0.0f;
         jumpFlag = false;
@@ -16,15 +16,20 @@ namespace dream
         hitHead = false;
         firstmPos = false;
         scrollCnt = 0;
-        GameOverFlag = false;
 
         Collision::initRect(playerHit, 100, 100);
         Collision::initRect(playerFootCollider, 100, 1);
         Collision::initRect(playerHeadCollider, 100, -1);
-        Collision::initRect(playerRightCollider, 1, 100);
+        Collision::initRect(playerRightCollider, 1, 70);
+
+        // 当たり判定位置更新
+        Collision::updateWorldRect(playerHit, static_cast<float>(mPos.x), static_cast<float>(mPos.y));
+        Collision::updateWorldRect(playerFootCollider, static_cast<float>(mPos.x), static_cast<float>((mPos.y + playerHit.h)));
+        Collision::updateWorldRect(playerHeadCollider, static_cast<float>(mPos.x), static_cast<float>(mPos.y));
+        Collision::updateWorldRect(playerRightCollider, static_cast<float>((mPos.x + playerHit.w)), static_cast<float>((mPos.y + 10)));
 
 
-        PlayerHandle = LoadGraph("Asset/Image/Character.png");
+        PlayerHandle = LoadGraph(JsonManager::StageDataInstance()->StageDataInstance()->GetCharaImg().c_str());
     }
 
     Stage1Player::~Stage1Player()
@@ -34,7 +39,7 @@ namespace dream
 
     void Stage1Player::Update(float deltaTime)
     {
-        scrollCnt+=2;
+        scrollCnt += 2;
         Input(deltaTime);
 
         if (onGround)   //接地してるとき
@@ -47,6 +52,8 @@ namespace dream
             jumpFlag = true;
         }
 
+
+
         //player当たり判定チェック
         Stage1Map::MapLayer dat = stage1.getMapHitRect();
         if (Stage1Map::mapHitCalc(dat, playerHit, scrollCnt))
@@ -57,17 +64,19 @@ namespace dream
         // 足元チェック
         playerSetGroundFlg(Stage1Map::mapHitCalc(dat, playerFootCollider, scrollCnt));
 
+        playerSetHeadHitFlg(Stage1Map::mapHitCalc(dat, playerHeadCollider, scrollCnt));
+
         //右側チェック
-        if (Stage1Map::mapHitCalc(dat, playerRightCollider, scrollCnt)==true)
+        if (Stage1Map::mapHitCalc(dat, playerRightCollider, scrollCnt))
         {
-            GameOverFlag = true;
+            StageSelect::SetGameFlag(stageTag.GameOver);
         }
 
         // 当たり判定位置更新
-        Collision::updateWorldRect(playerHit, mPos.x, mPos.y);
-        Collision::updateWorldRect(playerFootCollider, mPos.x, mPos.y + playerHit.h);
-        Collision::updateWorldRect(playerHeadCollider, mPos.x, mPos.y);
-        Collision::updateWorldRect(playerRightCollider, mPos.x + playerHit.w, mPos.y);
+        Collision::updateWorldRect(playerHit, static_cast<float>(mPos.x), static_cast<float>(mPos.y));
+        Collision::updateWorldRect(playerFootCollider, static_cast<float>(mPos.x), static_cast<float>((mPos.y + playerHit.h)));
+        Collision::updateWorldRect(playerHeadCollider, static_cast<float>(mPos.x), static_cast<float>(mPos.y));
+        Collision::updateWorldRect(playerRightCollider, static_cast<float>((mPos.x + playerHit.w)), static_cast<float>((mPos.y + 10)));
     }
 
     void Stage1Player::Draw()
@@ -109,7 +118,7 @@ namespace dream
             onGround = false;
         }
 
-        
+
 
         //ジャンプ中重力発生
         if (jumpFlag)
@@ -117,15 +126,17 @@ namespace dream
             vy += gravity * deltaTime;
         }
 
-        
-        
+        //常に重力
+        // ↑書き換え
+        //vy += gravity * deltaTime;
+
 
 
         //位置更新
-        mPos.x += vx;
-        mPos.y += vy;
+        mPos.x += static_cast<LONG>(vx);
+        mPos.y += static_cast<LONG>(vy);
 
-        
+
     }
 
     void Stage1Player::playerfixColPosition(Collision::sHitRect& hitRect)
@@ -143,12 +154,12 @@ namespace dream
 
         if (firstmPos != true)
         {
-            mPos.y = hitRect.worldLY;
+            mPos.y = static_cast<LONG>(hitRect.worldLY);
         }
         else
         {
-            mPos.x = hitRect.worldLX;
-            mPos.y = hitRect.worldLY;
+            mPos.x = static_cast<LONG>(hitRect.worldLX);
+            mPos.y = static_cast<LONG>(hitRect.worldLY);
         }
         firstmPos = false;
 
@@ -170,6 +181,7 @@ namespace dream
         hitHead = headHitFlg;
     }
 
+
     Collision::sHitRect Stage1Player::playerGetGroundCollider()
     {
         return playerFootCollider;
@@ -179,6 +191,5 @@ namespace dream
     {
         return playerHeadCollider;
     }
-
 
 }

@@ -28,8 +28,11 @@ namespace dream
 
         //シーン切り替え
         ////死んだ場合
-        //GameObjectManager::ReleaseAllObj();
-        //return new Stage1;
+        if (stageTag.GameOver == StageSelect::GetGameFlag())
+        {
+            GameObjectManager::ReleaseAllObj();
+            return new Stage1;
+        }
         ////タイトルに戻るボタン押した場合
         if (CheckHitKey(KEY_INPUT_TAB))
         {

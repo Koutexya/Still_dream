@@ -153,7 +153,7 @@ namespace dream
         else
         {
             DrawString(850, 300, "Stage1", GetColor(255, 255, 255));
-            DrawString(850, 500, "Stage2", GetColor(255, 255, 255));
+            //DrawString(850, 500, "Stage2", GetColor(255, 255, 255));
             DrawFormatString(700, 700, GetColor(255, 255, 255), "âπó  Å©Å@%dÅ@Å®", MusicVolume);
 
             DrawBox(700, Pos, 1250, Pos + 70, GetColor(255, 255, 255), FALSE);

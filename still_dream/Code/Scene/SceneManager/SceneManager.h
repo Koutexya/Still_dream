@@ -3,6 +3,7 @@
 #include<stack>
 
 #include"../../Object/GameObjectManager/GameObjectManager.h"
+#include"../../JsonMaster/JsonManager/JsonManager.h"
 
 namespace dream
 {

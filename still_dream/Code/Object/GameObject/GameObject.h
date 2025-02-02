@@ -51,6 +51,7 @@ namespace dream
     private:
         VECTOR mPos;    //オブジェクト位置
         std::string mTag;   //オブジェクト種類
+
     };
 }
 

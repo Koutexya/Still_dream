@@ -16,7 +16,7 @@ namespace dream
         //初期化処理
         GameObjectManager::Initialize();
         
-
+        JsonManager::InitJsonManager();
         //現在のシーンをタイトルに設定
         mNowScene.emplace(new Title);
     }
