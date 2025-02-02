@@ -2,6 +2,7 @@
 #include"../../GameObject/GameObject.h"
 #include"../../Collision/Collision.h"
 #include"../../../JsonMaster/JsonManager/JsonManager.h"
+#include"../../StageSelect/StageSelect.h"
 
 #include<DxLib.h>
 #include<fstream>
@@ -70,7 +71,6 @@ namespace dream
         static const int mapChipSize = 100;
         static const int mapImgXNum = 2;
         static const int mapImgYNum = 1;
-        float clearFlag;
 
         int scrollcnt;
 

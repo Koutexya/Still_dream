@@ -5,9 +5,12 @@ namespace dream
     //À‘Ì‚Ì’†g‚ğ‹ó‚É
     std::unique_ptr<StageSelect>StageSelect::mInstance = nullptr;
 
+
     StageSelect::StageSelect()
     {
         mInstance = nullptr;
+        SelectNum = "";
+        GameFlag = "";
     }
 
     StageSelect::~StageSelect()
@@ -24,4 +27,11 @@ namespace dream
             mInstance.reset(new StageSelect);
         }
     }
+
+    void StageSelect::finalize()
+    {
+        mInstance->SelectNum = "";
+        mInstance->GameFlag = "";
+    }
+    
 }

@@ -91,7 +91,6 @@ namespace dream
 
     void Stage1Player::Input(float deltaTime)
     {
-
         //ジャンプボタン押した瞬間か
         if (CheckHitKey(KEY_INPUT_SPACE))
         {
@@ -118,17 +117,8 @@ namespace dream
             onGround = false;
         }
 
-
-
-        //ジャンプ中重力発生
-        if (jumpFlag)
-        {
-            vy += gravity * deltaTime;
-        }
-
         //常に重力
-        // ↑書き換え
-        //vy += gravity * deltaTime;
+        vy += gravity * deltaTime;
 
 
 
