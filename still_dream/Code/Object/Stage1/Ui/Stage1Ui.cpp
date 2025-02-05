@@ -21,7 +21,7 @@ namespace dream
     void Stage1Ui::Draw()
     {
         //âÊñ ÉTÉCÉY(1920,1080)
-        DrawLine(0, 540, 1920, 540, GetColor(255, 255, 0));
+        //DrawLine(0, 540, 1920, 540, GetColor(255, 255, 0));
 
         //DrawBox(100, 100, 176, 176, GetColor(255, 255, 0), TRUE);
     }

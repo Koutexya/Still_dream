@@ -83,10 +83,10 @@ namespace dream
     {
         DrawGraph(mPos.x, mPos.y, PlayerHandle, TRUE);
 
-        Collision::drawRect(playerHit);
+        /*Collision::drawRect(playerHit);
         Collision::drawRect(playerFootCollider);
         Collision::drawRect(playerHeadCollider);
-        Collision::drawRect(playerRightCollider);
+        Collision::drawRect(playerRightCollider);*/
     }
 
     void Stage1Player::Input(float deltaTime)
