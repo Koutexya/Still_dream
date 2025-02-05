@@ -30,15 +30,22 @@ namespace dream
 
 
         PlayerHandle = LoadGraph(JsonManager::StageDataInstance()->StageDataInstance()->GetCharaImg().c_str());
+
+
+        ChangeVolumeSoundMem(100, BgmHandle);
+        BgmHandle = LoadSoundMem("Asset/Sound/Karma.mp3");
+        PlaySoundMem(BgmHandle, DX_PLAYTYPE_BACK, TRUE);
     }
 
     Stage1Player::~Stage1Player()
     {
         DeleteGraph(PlayerHandle);
+        DeleteSoundMem(BgmHandle);
     }
 
     void Stage1Player::Update(float deltaTime)
     {
+        ChangeVolumeSoundMem(100, BgmHandle);
         scrollCnt += 2;
         Input(deltaTime);
 
@@ -69,10 +76,11 @@ namespace dream
         //右側チェック
         if (Stage1Map::mapHitCalc(dat, playerRightCollider, scrollCnt))
         {
+            StopSoundMem(BgmHandle);
             StageSelect::SetGameFlag(stageTag.GameOver);
         }
 
-        // 当たり判定位置更新
+        // 当たり判定位置更新 
         Collision::updateWorldRect(playerHit, static_cast<float>(mPos.x), static_cast<float>(mPos.y));
         Collision::updateWorldRect(playerFootCollider, static_cast<float>(mPos.x), static_cast<float>((mPos.y + playerHit.h)));
         Collision::updateWorldRect(playerHeadCollider, static_cast<float>(mPos.x), static_cast<float>(mPos.y));

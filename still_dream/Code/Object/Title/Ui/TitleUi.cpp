@@ -7,21 +7,25 @@ namespace dream
     {
         SetFontSize(64);
         StageSelect::Initialize();
+        
+        ChangeVolumeSoundMem(MusicVolume * 2.5, BgmHandle);
+        BgmHandle = LoadSoundMem("Asset/Sound/Learning.mp3");
+        PlaySoundMem(BgmHandle, DX_PLAYTYPE_LOOP, TRUE);
     }
 
     TitleUi::~TitleUi()
     {
-
+        DeleteSoundMem(BgmHandle);
     }
 
     void TitleUi::Update(float deltaTime)
     {
-        Input(deltaTime); 
+        Input(deltaTime);  
     }
 
     void TitleUi::Input(float deltaTime)
     {
-        
+        ChangeVolumeSoundMem(MusicVolume * 2.5, BgmHandle);
         if (TitleScene == 0)
         {
             //タイトルのフェードイン表示が終わったら
@@ -78,6 +82,7 @@ namespace dream
                 {
                     StageSelect::SetSelect(stageTag.Stage2);
                 }
+                StopSoundMem(BgmHandle);
             }
             
 
