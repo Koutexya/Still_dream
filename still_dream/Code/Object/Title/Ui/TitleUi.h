@@ -32,9 +32,9 @@ namespace dream
         bool KeyLeftFlag = false;
         bool KeyRightFlag = false;
         int Pos = 300;
-        int MusicVolume = 100;
+        int MusicVolume = 50;
 
-
+        int BgmHandle;
         
     };
 }

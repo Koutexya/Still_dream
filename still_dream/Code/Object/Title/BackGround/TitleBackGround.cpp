@@ -17,12 +17,13 @@ namespace dream
 
     void TitleBackGround::Update(float deltaTime)
     {
-        Draw();
+        
     }
 
     void TitleBackGround::Draw()
     {
         //”wŒi‚Ì•\Ž¦
         DrawGraph(0, 0, BackGroundHandle, TRUE);
+        
     }
 }

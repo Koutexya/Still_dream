@@ -77,6 +77,6 @@ namespace dream
         bool firstmPos;
         int scrollCnt;
         
-        
+        int BgmHandle;
     };
 }

@@ -5,7 +5,7 @@ namespace dream
     Stage1Ui::Stage1Ui()
         :GameObject(stage1ObjectTag.UI)
     {
-
+        
     }
 
     Stage1Ui::~Stage1Ui()
