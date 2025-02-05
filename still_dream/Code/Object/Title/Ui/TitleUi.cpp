@@ -16,8 +16,7 @@ namespace dream
 
     void TitleUi::Update(float deltaTime)
     {
-        Input(deltaTime);
-        Draw();
+        Input(deltaTime); 
     }
 
     void TitleUi::Input(float deltaTime)
@@ -31,15 +30,7 @@ namespace dream
                 //タイトル表示から次に進む
                 if (CheckHitKey(KEY_INPUT_SPACE))
                 {
-                    if (KeySpaceFlag == false)
-                    {
-                        TitleScene = 1;
-                        KeySpaceFlag = true;
-                    }
-                }
-                else
-                {
-                    KeySpaceFlag = false;
+                    TitleScene = 1;
                 }
             }
         }
@@ -76,6 +67,18 @@ namespace dream
             {
                 KeyDownFlag = false;
             }
+            //エンターでプレイ先を決定
+            if (CheckHitKey(KEY_INPUT_RETURN))
+            {
+                if (Pos == 300)
+                {
+                    StageSelect::SetSelect(stageTag.Stage1);
+                }
+                if (Pos == 500)
+                {
+                    StageSelect::SetSelect(stageTag.Stage2);
+                }
+            }
             
 
             //音量変更
@@ -110,21 +113,6 @@ namespace dream
                 else
                 {
                     KeyRightFlag = false;
-                }
-            }
-            else
-            {
-                //エンターでプレイ先を決定
-                if (CheckHitKey(KEY_INPUT_RETURN))
-                {
-                    if (Pos == 300)
-                    {
-                        StageSelect::SetSelect(stageTag.Stage1);
-                    }
-                    if (Pos == 500)
-                    {
-                        StageSelect::SetSelect(stageTag.Stage2);
-                    }
                 }
             }
         }
