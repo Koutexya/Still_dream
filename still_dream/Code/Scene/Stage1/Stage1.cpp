@@ -2,7 +2,7 @@
 
 #include"Stage1.h"
 #include"../Title/Title.h"
-
+#include"../End/End.h"
 
 
 namespace dream
@@ -41,7 +41,7 @@ namespace dream
         {
             GameObjectManager::ReleaseAllObj();
             StageSelect::finalize();
-            return new Title;
+            return new End;
         }
         ////タイトルに戻るボタン押した場合
         if (CheckHitKey(KEY_INPUT_TAB))
