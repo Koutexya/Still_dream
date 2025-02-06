@@ -38,6 +38,7 @@ namespace dream
         int TitleNameHandle;
         int TitlePushHandle;
         int TitleSelectHandle;
+        int TitleMovieHandle;
 
     };
 }
