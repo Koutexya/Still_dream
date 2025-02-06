@@ -11,6 +11,8 @@ namespace dream
         TitleNameHandle = LoadGraph("Asset/Image/TitleName.png");
         TitlePushHandle = LoadGraph("Asset/Image/TitlePush.png");
         TitleSelectHandle = LoadGraph("Asset/Image/TitleSelect.png");
+        //TitleMovieHandle = LoadGraph("Asset/Movie/Title.mp4");
+        
         
         ChangeVolumeSoundMem(MusicVolume * 2.5, BgmHandle);
         BgmHandle = LoadSoundMem("Asset/Sound/Learning.mp3");
@@ -20,6 +22,11 @@ namespace dream
     TitleUi::~TitleUi()
     {
         DeleteSoundMem(BgmHandle);
+        DeleteGraph(TitleNameHandle);
+        DeleteGraph(TitlePushHandle);
+        DeleteGraph(TitleSelectHandle);
+        //DeleteGraph(TitleMovieHandle);
+
     }
 
     void TitleUi::Update(float deltaTime)
@@ -129,19 +136,20 @@ namespace dream
         {
             DrawGraph(0, 0, TitlePushHandle, TRUE);
             //タイトルのフェードイン表示 画像フェードイン出来てない！！
-            if (TitleFlg)
-            {
-                for (int i = 0; i < 255; i++)
-                {
-                    // 描画輝度をセット
-                    SetDrawBright(i, i, i);
-                    // グラフィックを描画
-                    DrawGraph(0, 0, TitleNameHandle, TRUE);
-                    ScreenFlip();
-                }
-                TitleFlg = false;
-            }
+            //if (TitleFlg)
+            //{
+            //    for (int i = 0; i < 255; i++)
+            //    {
+            //        // 描画輝度をセット
+            //        SetDrawBright(i, i, i);
+            //        // グラフィックを描画
+            //        DrawGraph(0, 0, TitleNameHandle, TRUE);
+            //        ScreenFlip();
+            //    }
+            //    TitleFlg = false;
+            //}
             DrawGraph(0, 0, TitleNameHandle, TRUE);
+
         }
         else
         {
