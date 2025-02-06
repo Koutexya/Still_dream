@@ -34,7 +34,7 @@ namespace dream
         if (stageTag.Stage2 == StageSelect::GetSelect())
         {
             GameObjectManager::ReleaseAllObj();
-            //return new Stage2;
+            return new Stage1;
         }
         return this;
     }
@@ -43,6 +43,6 @@ namespace dream
     {
         //全ゲームオブジェクトの描画
         GameObjectManager::Draw();
-        DrawFormatString(0, 0, GetColor(255, 255, 255), "title");
+        //DrawFormatString(0, 0, GetColor(255, 255, 255), "title");
     }
 }

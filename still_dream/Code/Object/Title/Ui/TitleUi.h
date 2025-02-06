@@ -35,6 +35,9 @@ namespace dream
         int MusicVolume = 50;
 
         int BgmHandle;
-        
+        int TitleNameHandle;
+        int TitlePushHandle;
+        int TitleSelectHandle;
+
     };
 }

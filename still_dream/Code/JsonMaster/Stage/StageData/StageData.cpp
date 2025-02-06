@@ -4,7 +4,8 @@ namespace dream
 {
     StageData::StageData(Json json)
     {
-        mMap1Csv = json["Map1Csv"];
+        mMapCsv = json["MapCsv"];
+        mTutorialMapCsv = json["TutorialMap"];
         mCharaImg = json["CharaImg"];
         mMapImg = json["MapImg"];
     }

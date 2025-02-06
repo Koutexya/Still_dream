@@ -7,6 +7,10 @@ namespace dream
     {
         SetFontSize(64);
         StageSelect::Initialize();
+
+        TitleNameHandle = LoadGraph("Asset/Image/TitleName.png");
+        TitlePushHandle = LoadGraph("Asset/Image/TitlePush.png");
+        TitleSelectHandle = LoadGraph("Asset/Image/TitleSelect.png");
         
         ChangeVolumeSoundMem(MusicVolume * 2.5, BgmHandle);
         BgmHandle = LoadSoundMem("Asset/Sound/Learning.mp3");
@@ -28,14 +32,10 @@ namespace dream
         ChangeVolumeSoundMem(MusicVolume * 2.5, BgmHandle);
         if (TitleScene == 0)
         {
-            //タイトルのフェードイン表示が終わったら
-            if (TitleFlg == false)
+            //タイトル表示から次に進む
+            if (CheckHitKey(KEY_INPUT_SPACE))
             {
-                //タイトル表示から次に進む
-                if (CheckHitKey(KEY_INPUT_SPACE))
-                {
-                    TitleScene = 1;
-                }
+                TitleScene = 1;
             }
         }
         if (TitleScene == 1)
@@ -127,27 +127,28 @@ namespace dream
     {
         if (TitleScene == 0)
         {
-            //タイトルのフェードイン表示
+            DrawGraph(0, 0, TitlePushHandle, TRUE);
+            //タイトルのフェードイン表示 画像フェードイン出来てない！！
             if (TitleFlg)
             {
                 for (int i = 0; i < 255; i++)
                 {
                     // 描画輝度をセット
                     SetDrawBright(i, i, i);
-
                     // グラフィックを描画
-                    DrawString(800, 500, "Still_Dream", GetColor(255, 255, 255));
+                    DrawGraph(0, 0, TitleNameHandle, TRUE);
                     ScreenFlip();
                 }
                 TitleFlg = false;
             }
-            DrawString(800, 500, "Still_Dream", GetColor(255, 255, 255));
+            DrawGraph(0, 0, TitleNameHandle, TRUE);
         }
         else
         {
-            DrawString(850, 300, "Stage1", GetColor(255, 255, 255));
-            //DrawString(850, 500, "Stage2", GetColor(255, 255, 255));
-            DrawFormatString(700, 700, GetColor(255, 255, 255), "音量 ←　%d　→", MusicVolume);
+            DrawGraph(0, 0, TitleSelectHandle, TRUE);
+            //DrawString(850, 300, "Stage1", GetColor(255, 255, 255));
+            ////DrawString(850, 500, "Stage2", GetColor(255, 255, 255));
+            DrawFormatString(980, 700, GetColor(0, 0, 0), "%d", MusicVolume);
 
             DrawBox(700, Pos, 1250, Pos + 70, GetColor(255, 255, 255), FALSE);
         }

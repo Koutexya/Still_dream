@@ -57,6 +57,6 @@ namespace dream
     {
         //全ゲームオブジェクトの描画
         GameObjectManager::Draw();
-        DrawFormatString(0, 0, GetColor(255, 255, 255), "stage1");
+        //DrawFormatString(0, 0, GetColor(255, 255, 255), "stage1");
     }
 }

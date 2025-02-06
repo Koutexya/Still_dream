@@ -1,6 +1,6 @@
 #pragma once
 #include"../../GameObject/GameObject.h"
-#include"../../StageSelect/StageSelect.h"
+#include"../../../JsonMaster/JsonManager/JsonManager.h"
 
 namespace dream
 {
@@ -21,6 +21,6 @@ namespace dream
         void Draw()override;
 
     private:
-
+        int TutorialUiHandle;
     };
 }
