@@ -149,6 +149,7 @@
     <ClCompile Include="Code\JsonMaster\Stage\StageData\StageData.cpp" />
     <ClCompile Include="Code\main.cpp" />
     <ClCompile Include="Code\Object\Collision\Collision.cpp" />
+    <ClCompile Include="Code\Object\End\BackGround\EndBackGround.cpp" />
     <ClCompile Include="Code\Object\GameObjectManager\GameObjectManager.cpp" />
     <ClCompile Include="Code\Object\GameObject\GameObject.cpp" />
     <ClCompile Include="Code\Object\Stage1\BackGround\Stage1BackGround.cpp" />
@@ -158,6 +159,7 @@
     <ClCompile Include="Code\Object\StageSelect\StageSelect.cpp" />
     <ClCompile Include="Code\Object\Title\BackGround\TitleBackGround.cpp" />
     <ClCompile Include="Code\Object\Title\Ui\TitleUi.cpp" />
+    <ClCompile Include="Code\Scene\End\End.cpp" />
     <ClCompile Include="Code\Scene\SceneBase\SceneBase.cpp" />
     <ClCompile Include="Code\Scene\SceneManager\SceneManager.cpp" />
     <ClCompile Include="Code\Scene\Stage1\Stage1.cpp" />
@@ -173,7 +175,9 @@
     <ClInclude Include="Code\JsonMaster\Stage\MasterStageData\MasterStageData.h" />
     <ClInclude Include="Code\JsonMaster\Stage\StageData\StageData.h" />
     <ClInclude Include="Code\Object\Collision\Collision.h" />
+    <ClInclude Include="Code\Object\End\BackGround\EndBackGround.h" />
     <ClInclude Include="Code\Object\GameObjectManager\GameObjectManager.h" />
+    <ClInclude Include="Code\Object\GameObject\EndObjectTag.h" />
     <ClInclude Include="Code\Object\GameObject\GameObject.h" />
     <ClInclude Include="Code\Object\GameObject\Stage1ObjectTag.h" />
     <ClInclude Include="Code\Object\GameObject\TitleObjectTag.h" />
@@ -185,6 +189,7 @@
     <ClInclude Include="Code\Object\StageSelect\StageTag.h" />
     <ClInclude Include="Code\Object\Title\BackGround\TitleBackGround.h" />
     <ClInclude Include="Code\Object\Title\Ui\TitleUi.h" />
+    <ClInclude Include="Code\Scene\End\End.h" />
     <ClInclude Include="Code\Scene\SceneBase\SceneBase.h" />
     <ClInclude Include="Code\Scene\SceneManager\SceneManager.h" />
     <ClInclude Include="Code\Scene\Stage1\Stage1.h" />

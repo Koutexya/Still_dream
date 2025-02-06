@@ -103,6 +103,15 @@
     <Filter Include="ソース ファイル\JsonMaster\Stage\MasterStageData">
       <UniqueIdentifier>{40c6eaef-590b-4d24-9919-40d4dc4e6c85}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Scene\End">
+      <UniqueIdentifier>{9acdcd74-67a5-4556-8baf-7c445b4878b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Object\End">
+      <UniqueIdentifier>{f35cf0f6-e830-4f93-b103-ff15f5400c53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Object\End\BackGround">
+      <UniqueIdentifier>{88d54bb0-c2d8-4ce1-adeb-9ee6760a8e18}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\main.cpp">
@@ -173,6 +182,12 @@
     </ClCompile>
     <ClCompile Include="Code\JsonMaster\Stage\MasterStageData\MasterStageData.cpp">
       <Filter>ソース ファイル\JsonMaster\Stage\MasterStageData</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Scene\End\End.cpp">
+      <Filter>ソース ファイル\Scene\End</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Object\End\BackGround\EndBackGround.cpp">
+      <Filter>ソース ファイル\Object\End\BackGround</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -250,6 +265,15 @@
     </ClInclude>
     <ClInclude Include="Code\JsonMaster\Stage\MasterStageData\MasterStageData.h">
       <Filter>ソース ファイル\JsonMaster\Stage\MasterStageData</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Scene\End\End.h">
+      <Filter>ソース ファイル\Scene\End</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Object\GameObject\EndObjectTag.h">
+      <Filter>ソース ファイル\Object\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Object\End\BackGround\EndBackGround.h">
+      <Filter>ソース ファイル\Object\End\BackGround</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
