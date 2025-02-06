@@ -1,7 +1,8 @@
 {
-    "Stage": {
-        "Map1Csv": "Asset/Csv/map.csv",
-        "CharaImg": "Asset/Image/Character.png",
-        "MapImg": "Asset/Image/map.png"
-    }
+  "Stage": {
+    "MapCsv": "Asset/Csv/Map.csv",
+    "TutorialMap": "Asset/Csv/TutorialMap.csv",
+    "CharaImg": "Asset/Image/Character.png",
+    "MapImg": "Asset/Image/map.png"
+  }
 }

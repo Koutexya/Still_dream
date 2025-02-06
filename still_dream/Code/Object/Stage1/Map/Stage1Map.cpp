@@ -14,7 +14,14 @@ namespace dream
         LoadDivGraph(stageData->GetMapImg().c_str(), mapImgXNum * mapImgYNum, mapImgXNum, mapImgYNum, mapChipSize, mapChipSize, mapChipImg);
 
         //ƒ}ƒbƒv“Ç‚Ýž‚Ý
-        mapLayerLoader(layerBrock, stageData->GetMap1Csv().c_str());
+        if (stageTag.Stage1 == StageSelect::GetSelect())
+        {
+            mapLayerLoader(layerBrock, stageData->GetTutorialMapCsv().c_str());
+        }
+        if (stageTag.Stage2 == StageSelect::GetSelect())
+        {
+            mapLayerLoader(layerBrock, stageData->GetMapCsv().c_str());
+        }
 
     }
 
@@ -45,6 +52,10 @@ namespace dream
     void Stage1Map::Draw()
     {
         mapLayerDraw(layerBrock, scrollcnt, 0);
+        if (stageTag.Stage2 == StageSelect::GetSelect())
+        {
+
+        }
     }
 
     void Stage1Map::mapLayerDraw(MapLayer& layer, int scrollOffsetX, int scrollOffsetY)

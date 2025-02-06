@@ -30,7 +30,7 @@ namespace dream
 
     void StageSelect::finalize()
     {
-        mInstance->SelectNum = "";
+        //mInstance->SelectNum = "";
         mInstance->GameFlag = "";
     }
     
