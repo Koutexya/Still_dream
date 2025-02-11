@@ -23,7 +23,7 @@ namespace dream
 
     }
 
-    SceneBase* Stage1::Update(float deltaTime)
+    SceneBase* Stage1::Update(const float deltaTime)
     {
         //全ゲームオブジェクトの更新
         GameObjectManager::Update(deltaTime);

@@ -34,7 +34,7 @@ namespace dream
 
         /// @brief  全オブジェクトの更新処理
         /// @param  デルタタイム
-        static void Update(float deltaTime);
+        static void Update(const float deltaTime);
 
         /// @brief  全オブジェクトの描画
         static void Draw();

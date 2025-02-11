@@ -20,7 +20,7 @@ namespace dream
         DeleteGraph(BackMovieHandle);
     }
 
-    void EndBackGround::Update(float deltaTime)
+    void EndBackGround::Update(const float deltaTime)
     {
         if (CheckHitKeyAll())
         {

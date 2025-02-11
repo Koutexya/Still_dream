@@ -20,7 +20,7 @@ namespace dream
         //処理なし
     }
 
-    SceneBase* Title::Update(float deltaTime)
+    SceneBase* Title::Update(const float deltaTime)
     {
         //全ゲームオブジェクトの更新
         GameObjectManager::Update(deltaTime);

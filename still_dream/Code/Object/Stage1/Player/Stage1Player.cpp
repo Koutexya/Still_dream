@@ -43,7 +43,7 @@ namespace dream
         DeleteSoundMem(BgmHandle);
     }
 
-    void Stage1Player::Update(float deltaTime)
+    void Stage1Player::Update(const float deltaTime)
     {
         ChangeVolumeSoundMem(100, BgmHandle);
         scrollCnt += 2;
@@ -97,7 +97,7 @@ namespace dream
         Collision::drawRect(playerRightCollider);*/
     }
 
-    void Stage1Player::Input(float deltaTime)
+    void Stage1Player::Input(const float deltaTime)
     {
         //ジャンプボタン押した瞬間か
         if (CheckHitKey(KEY_INPUT_SPACE))

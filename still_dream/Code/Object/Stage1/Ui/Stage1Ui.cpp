@@ -13,7 +13,7 @@ namespace dream
         //DeleteGraph(TutorialUiHandle);
     }
 
-    void Stage1Ui::Update(float deltaTime)
+    void Stage1Ui::Update(const float deltaTime)
     {
 
     }

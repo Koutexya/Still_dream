@@ -20,13 +20,13 @@ namespace dream
 
         /// @brief  更新処理
         /// @param  デルタタイム
-        void Update(float deltaTime)override;
+        void Update(const float deltaTime)override;
 
         /// @brief  描画処理
         void Draw()override;
 
         /// @brief  入力処理
-        void Input(float deltaTime)override;
+        void Input(const float deltaTime)override;
 
         /// <summary>
         /// 当たり判定矩形からプレイヤー位置を修正する
@@ -64,7 +64,7 @@ namespace dream
         Collision::sHitRect playerHeadCollider;    //頭上コライダー
         Collision::sHitRect playerRightCollider;   //右側コライダー
 
-        const float gravity = 40.0f;    //重力
+        const float gravity = 20.0f;    //重力
         const float jumpInitVelocity = 80.0f;    //ジャンプ初速度
 
         int PlayerHandle;   //画像
