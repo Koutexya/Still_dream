@@ -26,7 +26,7 @@ namespace dream
 
         /// @brief  更新
         /// @param  deltaTime=デルタタイム
-        virtual void Update(float deltaTime) = 0;
+        virtual void Update(const float deltaTime) = 0;
 
         /// @brief  描画
         virtual void Draw() = 0;

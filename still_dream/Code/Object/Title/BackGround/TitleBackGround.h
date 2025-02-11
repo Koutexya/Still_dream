@@ -16,7 +16,7 @@ namespace dream
 
         /// @brief  更新処理
         /// @param  デルタタイム
-        void Update(float deltaTime)override;
+        void Update(const float deltaTime)override;
 
         /// @brief  描画処理
         void Draw()override;

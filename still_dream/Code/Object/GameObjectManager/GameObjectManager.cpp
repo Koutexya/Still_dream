@@ -51,7 +51,7 @@ namespace dream
         mInstance->mObjects.clear();
     }
 
-    void GameObjectManager::Update(float deltaTime)
+    void GameObjectManager::Update(const float deltaTime)
     {
         for (std::string& tag : mInstance->NowScene_ObjTag)
         {

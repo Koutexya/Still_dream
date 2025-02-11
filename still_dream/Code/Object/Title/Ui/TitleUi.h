@@ -15,13 +15,13 @@ namespace dream
 
         /// @brief  更新処理
         /// @param  デルタタイム
-        void Update(float deltaTime)override;
+        void Update(const float deltaTime)override;
 
         /// @brief  描画処理
         void Draw()override;
 
         /// @brief 入力処理
-        void Input(float deltaTime)override;
+        void Input(const float deltaTime)override;
 
     private:
         int TitleScene = 0; //TitleScene=0でタイトルフェードイン表示　TitleScene=1で選択画面

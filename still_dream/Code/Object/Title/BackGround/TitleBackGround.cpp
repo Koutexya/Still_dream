@@ -15,7 +15,7 @@ namespace dream
         DeleteGraph(BackGroundHandle);
     }
 
-    void TitleBackGround::Update(float deltaTime)
+    void TitleBackGround::Update(const float deltaTime)
     {
         
     }

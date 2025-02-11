@@ -36,7 +36,7 @@ namespace dream
         mapUnloader(layerBrock);
     }
 
-    void Stage1Map::Update(float deltaTime)
+    void Stage1Map::Update(const float deltaTime)
     {
         if ((mapChipSize * layerBrock.mapXNum - 1980) > scrollcnt)
         {

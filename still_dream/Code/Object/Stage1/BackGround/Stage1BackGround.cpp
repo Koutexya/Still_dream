@@ -16,7 +16,7 @@ namespace dream
         DeleteGraph(BackGroundImg);
     }
 
-    void Stage1BackGround::Update(float deltaTime)
+    void Stage1BackGround::Update(const float deltaTime)
     {
 
     }

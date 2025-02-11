@@ -29,12 +29,12 @@ namespace dream
 
     }
 
-    void TitleUi::Update(float deltaTime)
+    void TitleUi::Update(const float deltaTime)
     {
         Input(deltaTime);  
     }
 
-    void TitleUi::Input(float deltaTime)
+    void TitleUi::Input(const float deltaTime)
     {
         ChangeVolumeSoundMem(MusicVolume * 2.5, BgmHandle);
         if (TitleScene == 0)
